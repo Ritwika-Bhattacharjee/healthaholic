@@ -1,0 +1,20 @@
+1. open command prompt and navigate to the folder directory in which you have the project
+2. type command: npm init
+and press enter command for all the default conditions
+3. type the following compounds to import the required packages and dependencies:
+npm install dotenv
+npm install express
+npm install bodyParser
+npm install ejs
+npm install mongoose
+npm install express-session
+npm install passport
+npm install passport-local-mongoose
+npm install passport-google-oauth20
+npm install passport-facebook
+npm install mongoose-findorcreate
+npm install nodemailer
+npm install @tensorflow/tfjs
+3. Install mongodb and run the mongo shell in another command prompt using commands mongod and mongo
+4. After all the libraies are imported, run the app using command: nodemon app.js
+5. To make any changes in the program, open the files and edit in a text editor.
