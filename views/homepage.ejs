@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+
+
+  <title>HomePage</title>
+  <style>
+  	@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+    @import 'http://fonts.googleapis.com/css?family=Berkshire+Swash';
+    @import 'http://fonts.googleapis.com/css?family=Merienda+One';
+    @import 'http://fonts.googleapis.com/css?family=Cookie';
+    @import 'http://fonts.googleapis.com/css?family=Just+Another+Hand';
+    @import 'http://fonts.googleapis.com/css?family=Great+Vibes';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  font-family: "Open Sans", "Trebuchet MS", Helvetica, sans-serif;
+  text-align: center;
+  min-width: 320px;
+  background: linear-gradient(90deg, white, white);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, white, #7CDEAF);
+  justify-content: space-around;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  z-index: 1000;
+}
+
+#logo-name {
+  display: flex;
+  align-items: center;
+}
+
+#header-img {
+  padding: 7px;
+  height: 70px;
+  display: flex;
+}
+
+#company-name {
+  font-size: 2.5em;
+  display: flex;
+  white-space: nowrap;
+  font-weight: bold;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  color: rgba(0,0,0,0.7);
+  text-shadow: 3px 3px 3px #fff;
+}
+
+#nav-bar {
+  display: flex;
+}
+
+.ul-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Arial", "Gadget", sans-serif;
+}
+
+.nav-link {
+  display: flex;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.ul-container li a{
+    color: black;
+}
+
+.ul-container li a:hover{
+  text-shadow: 3px yellow;
+  color: #9BC20D;
+  font-weight: bold;
+}
+
+.quote{
+	width: 30%;
+	background: url("homeimage4.jpg") no-repeat;
+	  /*background: linear-gradient(60deg, #A1B0B0, white);*/
+
+	background-size: cover;
+	font-size: 30px;
+	right: 0px;
+	top: 120px;
+
+	position: absolute;
+  	position: fixed;
+
+}
+#quotetext{
+	font-family: 'Berkshire Swash', Helvetica, sans-serif;
+  color: black;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.quote a:link, .quote a:visited {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  color: black;
+
+}
+
+
+#a1:hover, #a2:hover, #a3:hover {
+  background-color: white;
+}
+#a1{
+	background-color: #C2D918;
+}
+#a3{
+	background-color: #0B3B80;
+}
+#a2{
+	background-color: #2EA76F;
+}
+#a1,#a2,#a3{
+	margin-bottom: 10px;
+	border-radius: 30px;
+	width: 350px;
+	padding: 14px 25px;
+	font-family: 'Merienda One', Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+
+}
+
+#welcome{
+	font-family: 'Cookie', Helvetica, sans-serif;
+	font-size: 60px;
+	font-weight: bold;
+	text-align: left;
+	color: #8D1021;
+	padding-left: 30px;
+}
+#overview{
+	font-weight: bold;
+	font-size: 40px;
+	width: 70%;
+	text-align: left;
+	border-bottom: 1px solid black;
+	margin-left: 30px;
+	padding-bottom: 10px;
+}
+
+@media (max-width: 1024px) {
+  #header {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  #logo-name {
+    display: flex;
+  }
+  
+  #header-img {
+    height: 53px;
+    flex: 1 auto;
+  }
+  
+  #company-name {
+    flex: 1 auto;
+    font-size: 1.4em;
+  }
+  
+  #nav-bar {
+    flex: 1 0 100%;
+    margin-top: -10px;
+    justify-content: center;
+  }
+  
+  .ul-container {
+    margin: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-link {
+    margin: auto;
+    font-size: 0.9em;
+  }
+}
+
+  </style>
+
+  
+
+</head>
+<body>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+	<header id="header">
+      <div id="logo-name">
+      <img id="header-img" src="bacteria.png" alt="company-logo">
+        <p id="company-name">Healthaholic</p>
+        </div>
+      <nav id="nav-bar">
+        <ul class="ul-container">
+          <li><a class="nav-link" href="#services">Home</a></li>
+          <li><a class="nav-link" href="/profilepage">My Profile</a></li>
+          <li><a class="nav-link" href="#pricing">Contact-Us</a></li>
+          <li><a class="nav-link" href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="quote" style="height: 700px;">
+    	<div><p id="quotetext">He who has health has hope; and he who has hope has everything.</p></div>
+    	<div><p style="margin-bottom: 10px; font-family:'Arial Black';">Explore...</p>
+    		<button id="a1"><a href="/diseasepage">Predict Diseases</a></button><br>
+    		<button id="a2"><a href="#">Plan a Diet</a></button><br>
+    		<button id="a3"><a href="#">Plan your Fitness</a></button>
+
+    	</div>
+    </div>
+
+    <div style="margin-top: 140px; width: 70%;" class="leftbody">
+    	<p id="welcome" style="text-transform: capitalize;">Welcome <%= displayname %> !</p>
+    	<p id="overview" style="margin-bottom: 30px;">Your Health at a Glance5</p>
+
+      <div id="chartContainer" style="height: 300px; width: 80%; margin: auto;">
+        
+      </div>
+<!-- <%  var sugaritem %>
+  <% sugar.forEach(function(item, index){ %>
+    <% sugaritem = { %>
+      <% y: parseInt(item), %>
+      <% label: "Test"+(index+1) %>
+    <% } %>
+    <% sugardata.push(sugaritem) %>
+  <% }) %> -->
+    </div>
+
+</body>
+</html>

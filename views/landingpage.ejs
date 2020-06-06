@@ -1,0 +1,590 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <title>Product Landing Page</title>
+
+  <style>
+    @import 'https://fonts.googleapis.com/css?family=Open+Sans';
+    @import 'http://fonts.googleapis.com/css?family=Berkshire+Swash';
+    @import 'http://fonts.googleapis.com/css?family=Merienda+One';
+    @import 'http://fonts.googleapis.com/css?family=Cookie';
+    @import 'http://fonts.googleapis.com/css?family=Just+Another+Hand';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  font-family: "Open Sans", "Trebuchet MS", Helvetica, sans-serif;
+  text-align: center;
+  min-width: 320px;
+  background: linear-gradient(90deg, white, #33B475);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, white, #7CDEAF);
+  justify-content: space-around;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  z-index: 1000;
+}
+
+#logo-name {
+  display: flex;
+  align-items: center;
+}
+
+#header-img {
+  padding: 7px;
+  height: 70px;
+  display: flex;
+}
+
+#company-name {
+  font-size: 2.5em;
+  display: flex;
+  white-space: nowrap;
+  font-weight: bold;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  color: rgba(0,0,0,0.7);
+  text-shadow: 3px 3px 3px #fff;
+}
+
+#nav-bar {
+  display: flex;
+}
+
+.ul-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Arial", "Gadget", sans-serif;
+}
+
+.nav-link {
+  display: flex;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.ul-container li a{
+    color: black;
+}
+
+.ul-container li a:hover{
+  text-shadow: 3px yellow;
+  color: #9BC20D;
+  font-weight: bold;
+}
+
+.heroimage{
+  background: url("bg1.jpg") no-repeat;
+  background-size: cover;
+  padding-top: 190px;
+  padding-bottom: 40px;
+}
+
+.leftinfo{
+  width: 50%;
+  font-family: "Comic Sans MS", "Comic Sans", "cursive";
+  font-size: 30px;
+  font-weight: bold;
+  color: #D7F2E5;
+  text-align: left;
+  padding-left: 60px;
+  line-height: 50px;
+}
+
+#solution{
+  font-family: "Arial Black", "Gadget", sans-serif;
+  font-size: 50px;
+  margin-top: 80px;
+  color: black;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+#start{
+  background-color: transparent;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 60px;
+  padding-right: 60px;
+  border: 3px solid white;
+  color: white;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 20px;
+  margin-left: 20%;
+  margin-top: 20px;
+}
+#start:hover{
+  background: linear-gradient(90deg, #053263, #074A92);
+  font-weight: bold;
+  border: 3px solid #074A92;
+}
+#start2{
+  background: linear-gradient(90deg, #CF224D, #63051C);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: 3px solid #CF224D;
+  color: white;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+#start2:hover{
+  background: linear-gradient(90deg, #053263, #074A92);
+  font-weight: bold;
+  border: 3px solid #074A92;
+}
+.services{
+  padding-top: 30px;
+}
+.service-heading{
+  border-bottom: 2px solid black;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.service-heading h1{
+    font-family: 'Merienda One', Helvetica, sans-serif;
+    margin-top: 20px;
+
+}
+
+.service-content{
+  width: 70%;
+  margin: auto;
+}
+td{
+  border: 70px solid transparent;
+}
+
+
+.leftalign{
+  text-align: left;
+    padding-left: 20px;
+    padding-right: 0%;
+    width: 50%;
+
+}
+.rightalign{
+  text-align: right;
+    padding-right: 20px;
+    padding-left: 0%;
+    width: 50%;
+
+}
+
+/*flip card styles*/
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background: linear-gradient(90deg, #C5F0DC, #3BCA87);
+  color: white;
+  transform: rotateY(180deg);
+    font-family: 'Just Another Hand', Helvetica, sans-serif;
+font-size: 30px;
+}
+/*flip card css code ends*/
+#imginfo{
+  font-weight: bold;
+  font-size: 35px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: 'Just Another Hand', Helvetica, sans-serif;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+  text-transform: uppercase;
+}
+
+.contactus h1{
+  font-family: 'Merienda One', Helvetica, sans-serif;
+    margin-top: 20px;
+}
+
+.contactus{
+  background-color: black;
+  opacity: 0.6;
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 30px;
+  font-family: "Comic Sans MS", "Comic Sans", "cursive";
+
+}
+
+#email, #number, #address{
+  border: 2px solid black;
+  width: 30%;
+}
+#email, #number{
+  border-right: 1px solid white;
+}
+
+#bold{
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#contactform{
+  background-color: #4A4A4A;
+  color: white;
+  width: 50%;
+  margin: auto;
+  text-align: left;
+  padding-bottom: 20px;
+  padding-left: 100px;
+  border-radius: 3px;
+  position: absolute;
+  top: -60px;
+  left: 25%;
+  display: none;
+}
+input{
+  background-color: #272727;
+  color: white;
+  height: 35px;
+  width: 70%;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 10px;
+  border: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 0.7;
+  font-size: 12px; /* Firefox */
+}
+#send{
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #2ABDDA;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  width: 30%;
+  margin-top: 20px;
+}
+textarea{
+  background-color: #272727;
+  color: white;
+  border: none;
+  margin-top: 5px;
+  padding: 10px;
+  padding-top: 20px;
+  width: 70%;
+}
+#happy{
+  font-family: "Arial Black";
+  font-size: 25px;
+  margin-bottom: 30px;
+  margin-top: 5px;
+}
+
+@media (max-width: 1024px) {
+  #header {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  #logo-name {
+    display: flex;
+  }
+  
+  #header-img {
+    height: 53px;
+    flex: 1 auto;
+  }
+  
+  #company-name {
+    flex: 1 auto;
+    font-size: 1.4em;
+  }
+  
+  #nav-bar {
+    flex: 1 0 100%;
+    margin-top: -10px;
+    justify-content: center;
+  }
+  
+  .ul-container {
+    margin: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-link {
+    margin: auto;
+    font-size: 0.9em;
+  }
+}
+  </style>
+</head>
+<body>
+
+<script>
+  $(document).ready(function(){
+    $("#start2").click(function(){
+      $("#contactform").css("display", "block");
+    });
+    $("#close").click(function(){
+      $("#contactform").css("display", "none");
+    });
+    $("#send").click(function(){
+      $("#contactform").css("display", "none");
+    });
+  });
+</script>
+
+
+    <header id="header">
+      <div id="logo-name">
+      <img id="header-img" src="bacteria.png" alt="company-logo">
+        <p id="company-name">Healthaholic</p>
+        </div>
+      <nav id="nav-bar">
+        <ul class="ul-container">
+          <li><a class="nav-link" href="/register">Register</a></li>
+          <li><a class="nav-link" href="/login">Sign in</a></li>
+          <li><a class="nav-link" href="#pricing">About Us</a></li>
+          <li><a class="nav-link" href="#contacthere">Contact Us</a></li>
+
+        </ul>
+      </nav>
+    </header>
+
+    <div class="heroimage">
+      
+      <div class="leftinfo">
+        <p>Want to keep track of your Health?</p>
+      <p>Excited about Fitness?</p>
+      <p>Having Diet Issues?</p>
+      <p id="solution">One Stop for all your problems</p>
+
+      <button id="start"><a href="/register" style="text-decoration: none; color: white;">Get Started</a></button>
+
+      </div>
+      
+
+
+    </div>
+  
+<div class="services">
+  <div class="service-heading">
+    <h3>SEE WHAT WE OFFER</h3>
+    <h1>OUR SERVICES</h1>
+  </div>
+
+  <div class="service-content">
+
+    <table>
+      <tr>
+        <td id="half" class="leftalign" colspan="2">
+
+          <p id="imginfo">Updated Health Stats</p>
+          <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="circleimg1.jpg" alt="Avatar" style="width:300px;height:300px; border-radius: 150px;">
+            </div>
+            <div class="flip-card-back" style="border-radius: 150px;">
+              <div style="border-radius: 150px; width: 100%; height:100%; padding: 50px;">
+                <p>We maintain your health stats over time and present them to you in a visualy appealing form for better understanding of your health conditions</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+
+      </td>
+      <td id="half"  class="rightalign" colspan="2">
+
+          <p id="imginfo">Predict risk of diseases</p>
+
+          <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="circleimg2.jpg" alt="Avatar" style="width:300px;height:300px; border-radius: 150px;">
+            </div>
+            <div class="flip-card-back" style="border-radius: 150px;">
+              <div style="border-radius: 150px; width: 100%; height:100%; padding: 50px;">
+                <p>Just tell us your symptoms or any current problem you are facing and we will show you if you have risk of any diseases and specify the required remedies</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        
+      </td>
+      </tr>
+
+
+      <tr>
+        <td id="half" class="leftalign" colspan="2">
+
+          <p id="imginfo">Personalised Diet Plans</p>
+
+          <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="circleimg5.jpg" alt="Avatar" style="width:300px;height:300px; border-radius: 150px;">
+            </div>
+            <div class="flip-card-back" style="border-radius: 150px;">
+              <div style="border-radius: 150px; width: 100%; height:100%; padding: 50px;">
+                <p>Plan a perfect diet according to your taste, comfort and convinience to upgrade your health with ease!</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+
+      </td>
+      <td id="half" class="rightalign" colspan="2">
+
+          <p id="imginfo">Personalised Fitness Schedule</p>
+
+          <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="circleimg4.jpg" alt="Avatar" style="width:300px;height:300px; border-radius: 150px;">
+            </div>
+            <div class="flip-card-back" style="border-radius: 150px;">
+              <div style="border-radius: 150px; width: 100%; height:100%; padding: 50px;">
+                <p>Get a completely personalised fitness schedule perfect for your body type and issues by just answering a simple questionnaire!</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        
+      </td>
+
+
+    </table>
+
+
+
+      </div>
+
+      
+
+</div>
+<h3>Heard Enough? </h3>
+      <div style="width: 100%; margin: auto; text-align: center;">
+          <button id="start" style="margin-left: 0px; margin-top: 2px;"><a href="/register" style="text-decoration: none; color: white;">Get Started</a></button>
+      </div>
+
+
+<div class="contactus" style="position: relative;" id="contacthere">
+  <div style="width: 60%; border-bottom: 2px solid white; margin: auto; margin-bottom: 30px; padding-bottom: 10px;"><h1>CONTACT US</h1>
+</div>
+<div class="contact-body">
+  <table width="100%">
+    <tr>
+      <td id="email"><p id="bold">Email</p>
+        <p>ritspure@gmail.com</p>
+        <p>riya19262619@gmail.com</p>
+        <p>ritwika.bhattacharjee2018@vitstudent.ac.in</p>
+      </td>
+
+      <td id="number">
+        <p id="bold">Contact Number</p>
+        <p>990326654</p>
+        <p>995960220</p>
+        <p>932954960</p>
+      </td>
+
+      <td id="address">
+        <p id="bold">Address</p>
+        <p>Chennai</p>
+        <p>Kolkata</p>
+        <p>Mumbai</p>
+        <p>Bhubaneshwar</p>
+      </td>
+
+    </tr>
+  </table>
+</div>
+
+<button id="start2">Write To Us Now!</button>
+
+<div id="contactform">
+  <form action="/contactform" method="POST">
+    <img src="close.png" style="margin-top: 0%; margin-left: 95%; cursor: pointer;" id="close">
+    <p id="happy">We'd Love to Hear From You.</p>
+    <input type="text" name="name" placeholder="NAME"><br>
+    <input type="email" name="email" placeholder="EMAIL"><br>
+    <textarea rows="9" cols="50" placeholder="ENTER YOUR MESSAGE HERE..." name="message"></textarea><br>
+    <input type="submit" name="subbut" value="Send Message" id="send">
+  </form>
+</div>
+</div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+
+
+  <title>HomePage</title>
+  <style>
+  	@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+    @import 'http://fonts.googleapis.com/css?family=Berkshire+Swash';
+    @import 'http://fonts.googleapis.com/css?family=Merienda+One';
+    @import 'http://fonts.googleapis.com/css?family=Cookie';
+    @import 'http://fonts.googleapis.com/css?family=Just+Another+Hand';
+    @import 'http://fonts.googleapis.com/css?family=Great+Vibes';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  font-family: "Open Sans", "Trebuchet MS", Helvetica, sans-serif;
+  text-align: center;
+  min-width: 320px;
+  background: linear-gradient(90deg, white,gray);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, white, #7CDEAF);
+  justify-content: space-around;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  z-index: 1000;
+}
+
+#logo-name {
+  display: flex;
+  align-items: center;
+}
+
+#header-img {
+  padding: 7px;
+  height: 70px;
+  display: flex;
+}
+
+#company-name {
+  font-size: 2.5em;
+  display: flex;
+  white-space: nowrap;
+  font-weight: bold;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  color: rgba(0,0,0,0.7);
+  text-shadow: 3px 3px 3px #fff;
+}
+
+#nav-bar {
+  display: flex;
+}
+
+.ul-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Arial", "Gadget", sans-serif;
+}
+
+.nav-link {
+  display: flex;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.ul-container li a{
+    color: black;
+}
+
+.ul-container li a:hover{
+  text-shadow: 3px yellow;
+  color: #9BC20D;
+  font-weight: bold;
+}
+
+#level1{
+  margin-top: 120px;
+  width: 100%;
+  background: url("profilebg1.jpg") no-repeat;
+  background-size: cover;
+}
+#level2{
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#level3{
+  margin-left: 200px;
+  margin-right: 100px;
+  text-align: left;
+}
+#name{
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
+}
+.choosetab{
+  background-color: white;
+  font-family: "Times New Roman";
+  font-weight: bold;
+  font-size: 17px;
+}
+.choosetab td{
+  height: 100%;
+   padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 5px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+}
+#border{
+  border-bottom: 5px solid blue;
+  border-right: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+}
+#name2{
+  font-weight: bold;
+  margin-top: 40px;
+  text-align: left;
+  margin-left: 200px;
+  font-size: 30px;
+  font-family: "Times New Roman";
+  padding-bottom: 10px;
+  border-bottom: 2px solid darkblue;
+  margin-bottom: 30px;
+  width: 50%;
+}
+#leftinfo, #rightinfo{
+  text-align: left;
+  color: #2B116C;
+  font-weight: bold;
+  font-family: "Times New Roman";
+  font-size: 20px;
+  padding-left: 60px;
+  padding-bottom: 60px;
+}
+#leftinfo div{
+  height: 70%;
+    border-right: 1px solid black;
+}
+#subheads{
+  font-size: 22px;
+  color: black;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  width: 50%;
+  color: maroon;
+}
+#start{
+  background: linear-gradient(90deg, #0D2002, #2D690A);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 3px solid white;
+  color: black;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 15px;
+  margin-left: 80%;
+  margin-top: 40px;
+}
+#start:hover{
+  background: linear-gradient(90deg, #053263, #074A92);
+  font-weight: bold;
+  border: 3px solid #074A92;
+}
+#leftinfo span, #rightinfo span{
+  color: #116C17;
+}
+@media (max-width: 1024px) {
+  #header {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  #logo-name {
+    display: flex;
+  }
+  
+  #header-img {
+    height: 53px;
+    flex: 1 auto;
+  }
+  
+  #company-name {
+    flex: 1 auto;
+    font-size: 1.4em;
+  }
+  
+  #nav-bar {
+    flex: 1 0 100%;
+    margin-top: -10px;
+    justify-content: center;
+  }
+  
+  .ul-container {
+    margin: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-link {
+    margin: auto;
+    font-size: 0.9em;
+  }
+}
+
+  </style>
+</head>
+<body>
+	<header id="header">
+      <div id="logo-name">
+      <img id="header-img" src="bacteria.png" alt="company-logo">
+        <p id="company-name">Healthaholic</p>
+        </div>
+      <nav id="nav-bar">
+        <ul class="ul-container">
+          <li><a class="nav-link" href="/homepage">Home</a></li>
+          <li><a class="nav-link" href="/profilepage">My Profile</a></li>
+          <li><a class="nav-link" href="/contact">Contact-Us</a></li>
+          <li><a class="nav-link" href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="level1">
+      <div id="level2">
+        <div id="level3">
+          <p id="name"><%= name %></p>
+          <p>Doctors won’t make you healthy. Nutritionists won’t make you slim. Teachers won’t make you smart. Gurus won’t make you calm. Mentors won’t make you rich. Trainers won’t make you fit. Ultimately, you have to take responsibility in your hands. Save yourself. </p><br>
+          <p>Your health is your greatest gift, your most precious possession and the highest form of happiness.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="choosetab">
+      <table width="100%">
+        <tr>
+          <td><a href="/profilepage" style="text-decoration: none; color: black;">Personal Details</a></td>
+          <td id="border"><a href="/healthstatspage" style="text-decoration: none; color: black;">Health Stats</a></td>
+          <td><a href="/profiledietpage" style="text-decoration: none; color: black;">My Diet</a></td>
+          <td><a href="/profilefitnesspage" style="text-decoration: none; color: black;">My Fitness Routine</a></td>
+        </tr>
+      </table>
+    </div>
+<button id="start"><a href="/ediths" style="text-decoration: none; color: white;">Edit</a></button>
+    <div class="mainbody" style="padding-top: 0px;">
+      <table width="100%" style="margin-left: 100px;">
+        <tr>
+          <td>
+          <div id="leftinfo">
+            <div>
+              <p id="subheads">Blood Test Parameters</p>
+
+              <p>Red Blood Cells Count(RBCC): <span><%= rbcc %></span></p>
+            <p>White Blood Cells Count(WBCC): <span><%= wbcc %></span></p>
+            <p>Haemoglobin: <span><%= hemo %></span></p>
+            <p>Platelets Count: <span><%= platelet %></span></p>
+            <p>Lymphocyctes: <span><%= lymph %></span></p>
+            </div>
+            
+          </div>
+      </td>
+      <td>
+          <div id="rightinfo">
+            <div>
+              <p id="subheads">Other Health Parameters</p>
+            <p>Blood Sugar: <span><%= sugar %></span></p>
+            <p>Total Cholesterol: <span><%= chol %></span></p>
+            <p>Uric Acid: <span><%= urea %></span></p>
+            <p>Calcium: <span><%= cal %></span></p>
+            </div>
+            
+          </div>
+      </td>
+        </tr>
+        
+      </table>
+    </div>
+      
+
+    
+</body>
+</html>

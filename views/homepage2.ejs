@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>HomePage</title>
+  <style>
+  	@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+    @import 'http://fonts.googleapis.com/css?family=Berkshire+Swash';
+    @import 'http://fonts.googleapis.com/css?family=Merienda+One';
+    @import 'http://fonts.googleapis.com/css?family=Cookie';
+    @import 'http://fonts.googleapis.com/css?family=Just+Another+Hand';
+    @import 'http://fonts.googleapis.com/css?family=Great+Vibes';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  font-family: "Open Sans", "Trebuchet MS", Helvetica, sans-serif;
+  text-align: center;
+  min-width: 320px;
+  background: linear-gradient(90deg, white, white);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, white, #7CDEAF);
+  justify-content: space-around;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  z-index: 1000;
+}
+
+#logo-name {
+  display: flex;
+  align-items: center;
+}
+
+#header-img {
+  padding: 7px;
+  height: 70px;
+  display: flex;
+}
+
+#company-name {
+  font-size: 2.5em;
+  display: flex;
+  white-space: nowrap;
+  font-weight: bold;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  color: rgba(0,0,0,0.7);
+  text-shadow: 3px 3px 3px #fff;
+}
+
+#nav-bar {
+  display: flex;
+}
+
+.ul-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Arial", "Gadget", sans-serif;
+}
+
+.nav-link {
+  display: flex;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.ul-container li a{
+    color: black;
+}
+
+.ul-container li a:hover{
+  text-shadow: 3px yellow;
+  color: #9BC20D;
+  font-weight: bold;
+}
+
+.quote{
+	width: 30%;
+	background: url("homeimage4.jpg") no-repeat;
+	  /*background: linear-gradient(60deg, #A1B0B0, white);*/
+
+	background-size: cover;
+	font-size: 30px;
+	right: 0px;
+	top: 120px;
+
+	position: absolute;
+  	position: fixed;
+
+}
+#quotetext{
+	font-family: 'Berkshire Swash', Helvetica, sans-serif;
+  color: black;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.quote a:link, .quote a:visited {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  color: black;
+
+}
+
+
+#a1:hover, #a2:hover, #a3:hover {
+  background-color: white;
+}
+#a1{
+	background-color: #C2D918;
+}
+#a3{
+	background-color: #0B3B80;
+}
+#a2{
+	background-color: #2EA76F;
+}
+#a1,#a2,#a3{
+	margin-bottom: 10px;
+	border-radius: 30px;
+	width: 350px;
+	padding: 14px 25px;
+	font-family: 'Merienda One', Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+
+}
+
+#welcome{
+	font-family: 'Cookie', Helvetica, sans-serif;
+	font-size: 60px;
+	font-weight: bold;
+	text-align: left;
+	color: #8D1021;
+	padding-left: 30px;
+}
+#overview{
+	font-weight: bold;
+	font-size: 40px;
+	width: 70%;
+	text-align: left;
+	border-bottom: 1px solid black;
+	margin-left: 30px;
+	padding-bottom: 10px;
+}
+
+#start{
+  background: linear-gradient(90deg, #83C3CB, #135D66);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 3px solid white;
+  color: black;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 15px;
+  margin-left: 60%;
+  margin-top: 40px;
+}
+#start:hover{
+  background: linear-gradient(90deg, #053263, #074A92);
+  font-weight: bold;
+  border: 3px solid #074A92;
+}
+#c1, #c2, #c3, #c4, #c5, #c6{
+  display: block;
+}
+#chatbottom{
+  background-color: #21A631;
+  font-weight: bold;
+  color: white;
+  padding: 5px;
+  font-family: "Arial Black";
+  font-size: 20px;
+  width: 300px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: auto;
+  /*position: absolute;
+  top: 508px;
+  left: 0px;*/
+}
+
+.update{
+  color: white;
+  font-weight: bold;
+  background-color: #373B38;
+  width: 85%;
+  margin-left: 60px;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 30px;
+}
+.update:hover{
+  background-color: #39CE5E;
+}
+#updateurea, #updatesugar, #updatechol, #updaterbc, #updateplat, #updatehemo{
+  display: none;
+}
+@media (max-width: 1024px) {
+  #header {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  #logo-name {
+    display: flex;
+  }
+  
+  #header-img {
+    height: 53px;
+    flex: 1 auto;
+  }
+  
+  #company-name {
+    flex: 1 auto;
+    font-size: 1.4em;
+  }
+  
+  #nav-bar {
+    flex: 1 0 100%;
+    margin-top: -10px;
+    justify-content: center;
+  }
+  
+  .ul-container {
+    margin: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-link {
+    margin: auto;
+    font-size: 0.9em;
+  }
+}
+
+  </style>
+
+  <script>
+
+  /*$(document).ready(function(){
+  $("#testing").each(function(index, value){
+    console.log($(this).html());
+    console.log("hello");
+  });
+});*/
+
+
+</script>
+
+
+</head>
+<body>
+  <script>
+
+  $(document).ready(function(){
+    var i=0; 
+    var lab = "";
+    var sugaritem;
+    var sugardata=[];
+    var temp=0;
+  $(".item").each(function(index, value){
+    console.log($(this).html());
+    console.log("hello");
+    i = parseInt($(this).html());
+    lab = "Test "+(index+1);
+    console.log(lab); 
+    sugaritem = {
+      y: i,
+      label: lab
+    };
+    sugardata[index]=sugaritem;
+    console.log(sugardata);
+    temp = index;
+  });
+
+  sugaritem = {
+    y: 0,
+    label: ""
+  }
+  sugardata[temp+1]=sugaritem;
+  var chart = new CanvasJS.Chart("chartContainer", {
+  animationEnabled: true,
+  theme: "light2", // "light1", "light2", "dark1", "dark2"
+  title:{
+    text: "Fasting Blood Sugar Test Values"
+  },
+  axisY: {
+    title: "Sugar in milimole per litre(mmol/L)",
+    stripLines: [{
+      value: 4,
+      label: "Ideal Minimum = 4mmol/L"
+    },{
+      value: 5.4,
+      label: "Ideal Maximum = 5.8mmol/L"
+    }
+    ]
+  },
+  data: [{        
+    type: "column",  
+    showInLegend: true, 
+    legendMarkerColor: "grey",
+    legendText: "Order of Tests",
+
+    dataPoints: sugardata
+  }]
+});
+//chart.render();
+
+
+    var hemoitem;
+    var hemodata=[];
+    
+$(".item1").each(function(index, value){
+    console.log($(this).html());
+    console.log("hello");
+    i = parseInt($(this).html());
+    lab = "Test "+(index+1);
+    console.log(lab); 
+    hemoitem = {
+      y: i,
+      label: lab
+    };
+    hemodata[index]=hemoitem;
+    console.log(hemodata);
+    temp = index;
+  });
+
+  var chart1 = new CanvasJS.Chart("chartContainer1", {
+  animationEnabled: true,  
+  title:{
+    text: "Haemoglobin Test Values"
+  },
+  axisY: {
+    title: "Haemoglobin in grams per decilitre(g/dL)",
+    stripLines: [{
+      value: 12,
+      label: "ideal Minimum = 12g/dL"
+    },{
+      value: 17.5,
+      label: "ideal Maximum = 17.5g/dL"
+    }
+    ]
+  },
+  data: [{
+    type: "spline",
+    dataPoints: hemodata
+  }]
+});
+//chart1.render();
+
+
+var cholitem;
+    var choldata=[];
+    
+$(".item2").each(function(index, value){
+    console.log($(this).html());
+    console.log("hello");
+    i = parseInt($(this).html());
+    lab = "Test "+(index+1);
+    console.log(lab); 
+    cholitem = {
+      y: i,
+      label: lab
+    };
+    choldata[index]=cholitem;
+    console.log(choldata);
+    temp = index;
+  });
+
+var chart2 = new CanvasJS.Chart("chartContainer2", {
+  animationEnabled: true,
+  
+  title:{
+    text:"Cholesterol Test Values"
+  },
+  axisX:{
+    interval: 1
+  },
+  axisY2:{
+    interlacedColor: "rgba(1,77,101,.2)",
+    gridColor: "rgba(1,77,101,.1)",
+    title: "Cholesterol in miligrams per deciliter(mg/dL)",
+    stripLines: [{
+      value: 150,
+      label: "Ideal Minimum = 150 mg/dL"
+    },
+    {
+      value: 200,
+      label: "Ideal Maximum = 200 mg/dL"
+    },
+    {
+      value: 240,
+      label: "Borderline Maximum = 240 mg/dL"
+    }
+    ]
+  },
+  axisY:{
+    stripLines: [{
+      value: 30,
+      label: "Average",
+    }]
+  },
+  data: [{
+    type: "bar",
+    name: "companies",
+    axisYType: "secondary",
+    color: "#014D65",
+    dataPoints: choldata
+  }]
+});
+//chart2.render();
+
+
+var platitem;
+    var platdata=[];
+    
+$(".item3").each(function(index, value){
+    console.log($(this).html());
+    console.log("hello");
+    i = parseInt($(this).html());
+    lab = "Test "+(index+1);
+    console.log(lab); 
+    platitem = {
+      y: i,
+      label: lab
+    };
+    platdata[index]=platitem;
+    console.log(platdata);
+    temp = index;
+  });
+
+var chart3 = new CanvasJS.Chart("chartContainer3", {
+  animationEnabled: true,  
+  title:{
+    text: "Platelet Test Values"
+  },
+  axisY: {
+    title: "1000 Platelets per microlitre of Blood",
+    interlacedColor: "rgba(199,99,20,.2)",
+    gridColor: "rgba(199,99,20,.1)",
+    stripLines: [{
+      value: 150,
+      label: "Ideal Minimum = 150k"
+    },{
+      value: 450,
+      label: "Ideal Maximum = 450k"
+    }]
+  },
+  data: [{
+    type: "spline",
+    dataPoints: platdata
+  }]
+});
+//chart3.render();
+
+
+var rbccitem;
+    var rbccdata=[];
+temp =0;
+rbccitem = {
+  y:0,
+  label: ""
+};
+rbccdata[temp] = rbccitem;
+    
+$(".item4").each(function(index, value){
+    console.log($(this).html());
+    console.log("hello");
+    i = parseInt($(this).html());
+    lab = "Test "+(index+1);
+    console.log(lab); 
+    rbccitem = {
+      y: i,
+      label: lab
+    };
+    rbccdata[index+1]=rbccitem;
+    console.log(rbccdata);
+    temp = index;
+  });
+
+rbccitem = {
+  y:0, 
+  label: ""
+};
+rbccdata[temp+2]=rbccitem;
+
+var wbccitem;
+    var wbccdata=[];
+temp =0;
+wbccitem = {
+  y:0,
+  label: ""
+};
+wbccdata[temp] = wbccitem;
+$(".item5").each(function(index, value){
+    console.log($(this).html());
+    console.log("hello");
+    i = parseInt($(this).html());
+    lab = "Test "+(index+1);
+    console.log(lab); 
+    wbccitem = {
+      y: i,
+      label: lab
+    };
+    wbccdata[index+1]=wbccitem;
+    console.log(wbccdata);
+    temp = index;
+  });
+wbccitem = {
+  y:0, 
+  label: ""
+};
+wbccdata[temp+2]=wbccitem;
+
+var chart4 = new CanvasJS.Chart("chartContainer4", {
+  animationEnabled: true,
+  title:{
+    text: "RBC and WBC Count Test Values"
+  },  
+  axisY: {
+    title: "White Blood Cells Count in 1000 cells per microlitre of blood",
+    titleFontColor: "#4F81BC",
+    lineColor: "#4F81BC",
+    labelFontColor: "#4F81BC",
+    tickColor: "#4F81BC",
+    stripLines: [
+    {
+      value: 4.5,
+      label: "WBCC Minimum"
+    },
+    {
+      value: 11,
+      label: "WBCC Maximum"
+    },]
+  },
+  axisY2: {
+    title: "Red Blood Cells Count in millions cell per microlitre of blood",
+    titleFontColor: "#C0504E",
+    lineColor: "#C0504E",
+    labelFontColor: "#C0504E",
+    tickColor: "#C0504E",
+    stripLines: [
+    {
+      value: 4.1,
+      label: "RBCC Minimum"
+    },
+    {
+      value: 5.9,
+      label: "RBCC Maximum"
+    }]
+  },  
+  toolTip: {
+    shared: true
+  },
+  legend: {
+    cursor:"pointer",
+    itemclick: toggleDataSeries
+  },
+  data: [{
+    type: "column",
+    name: "WBC Count",
+    legendText: "White Blood Cells Count in 1000 cells per microlitre of blood",
+    showInLegend: true, 
+    dataPoints:wbccdata
+  },
+  {
+    type: "column", 
+    name: "RBC Count",
+    legendText: "Red Blood Cells Count in millions cell per microlitre of blood",
+    axisYType: "secondary",
+    showInLegend: true,
+    dataPoints:rbccdata
+  }]
+});
+//chart4.render();
+
+function toggleDataSeries(e) {
+  if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+    e.dataSeries.visible = false;
+  }
+  else {
+    e.dataSeries.visible = true;
+  }
+  chart4.render();
+}
+
+var ureaitem;
+    var ureadata=[];
+
+$(".item6").each(function(index, value){
+    console.log($(this).html());
+    console.log("hello");
+    i = parseInt($(this).html());
+    lab = "Test "+(index+1);
+    console.log(lab); 
+    ureaitem = {
+      y: i,
+      label: lab
+    };
+    ureadata[index]=ureaitem;
+    console.log(ureadata);
+    temp = index;
+  });
+
+var chart5 = new CanvasJS.Chart("chartContainer5", {
+  animationEnabled: true,  
+  title:{
+    text: "Uric Acid Test Values"
+  },
+  axisY: {
+    title: "Uric Acid in mg/dL",
+    stripLines: [{
+      value: 6.5,
+      label: "Maximum = 6.5mg/dL"
+    }]
+  },
+  data: [{
+    type: "splineArea",
+    color: "rgba(54,158,173,.7)",
+    markerSize: 5,
+    dataPoints: ureadata
+  }]
+  });
+//chart5.render();
+
+
+if($("#test1").html()=="0"){
+  console.log("zero1");
+  $("#updatesugar").css("display", "block");
+  $("#c1").css("display", "none");
+}else{
+  chart.render();
+}
+if($("#test2").html()=="0"){
+  $("#updatehemo").css("display", "block");
+  $("#c2").css("display", "none");
+}else{
+  chart1.render();
+}
+if($("#test3").html()=="0"){
+  $("#updatechol").css("display", "block");
+  $("#c3").css("display", "none");
+}else{
+  chart2.render();
+}
+if($("#test4").html()=="0"){
+  $("#updateplat").css("display", "block");
+  $("#c4").css("display", "none");
+}else{
+  chart3.render();
+}
+if($("#test5").html()=="0" || $("#test6").html()=="0"){
+  $("#updaterbc").css("display", "block");
+  $("#c5").css("display", "none");
+}else{
+  chart4.render();
+}
+if($("#test7").html()=="0"){
+  $("#updateurea").css("display", "block");
+  $("#c6").css("display", "none");
+}else{
+  chart5.render();
+}
+
+
+});  
+    /*window.onload = function(){
+  var ele = document.getElementById("testing");
+  console.log(ele.innerHTML);
+  console.log("hello");
+}*/
+  </script>
+
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+	<header id="header">
+      <div id="logo-name">
+      <img id="header-img" src="bacteria.png" alt="company-logo">
+        <p id="company-name">Healthaholic</p>
+        </div>
+      <nav id="nav-bar">
+        <ul class="ul-container">
+          <li><a class="nav-link" href="/homepage">Home</a></li>
+          <li><a class="nav-link" href="/profilepage">My Profile</a></li>
+          <li><a class="nav-link" href="/contact">Contact-Us</a></li>
+          <li><a class="nav-link" href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="quote" style="height: 700px;">
+    	<div><p id="quotetext">He who has health has hope; and he who has hope has everything.</p></div>
+    	<div><p style="margin-bottom: 0px; font-family:'Arial Black';">Explore...</p>
+    		<button id="a1"><a href="/diseasepage">Predict Diseases</a></button><br>
+    		<button id="a2"><a href="/dietquiz">Plan a Diet</a></button><br>
+    		<button id="a3"><a href="/fitnessquiz">Plan your Fitness</a></button>
+        <div id="chatbottom">
+  <img src="cursor.png"><span>Talk to DocBot</span>
+</div>
+
+    	</div>
+    </div>
+
+    <div style="margin-top: 140px; width: 70%;" class="leftbody">
+    	<p id="welcome" style="text-transform: capitalize;">Welcome <%= displayname %> !</p>
+    	<p id="overview" style="margin-bottom: 30px;">Your Health at a Glance</p>
+
+      <div id="c3">
+
+      <div id="chartContainer2" style="height: 300px; width: 80%; margin: auto;">
+         
+      </div>
+            <button id="start"><a href="/ediths" style="text-decoration: none; color: white;">Update Values</a></button>
+            <br><br>
+
+      </div>
+
+
+<div id="c1">
+      <div id="chartContainer" style="height: 300px; width: 80%; margin: auto;">
+         
+      </div>
+      <button id="start"><a href="/ediths" style="text-decoration: none; color: white;">Update Values</a></button>
+      <br><br>
+</div>
+
+
+<div id="c2">
+
+      <div id="chartContainer1" style="height: 300px; width: 80%; margin: auto;">
+         
+      </div>
+            <button id="start"><a href="/ediths" style="text-decoration: none; color: white;">Update Values</a></button>
+      <br><br>
+</div>
+
+
+
+<div id="c4">
+
+      <div id="chartContainer3" style="height: 300px; width: 80%; margin: auto;">
+         
+      </div>
+            <button id="start"><a href="/ediths" style="text-decoration: none; color: white;">Update Values</a></button>
+      <br><br>
+</div>
+
+
+<div id="c5">
+
+      <div id="chartContainer4" style="height: 300px; width: 80%; margin: auto;">
+         
+      </div>
+            <button id="start"><a href="/ediths" style="text-decoration: none; color: white;">Update Values</a></button>
+      <br><br>
+</div>
+
+
+<div id="c6">
+
+      <div id="chartContainer5" style="height: 300px; width: 80%; margin: auto;">
+         
+      </div>
+            <button id="start"><a href="/ediths" style="text-decoration: none; color: white;">Update Values</a></button>
+      <br><br>
+</div>
+
+<div style="text-align: left;">
+<button id="updatechol" class="update"><a href="/ediths" style="text-decoration: none; color: white;">>> Update Cholesterol Values</a></button>
+</div>
+
+<div style="text-align: left;">
+<button id="updatesugar" class="update"><a href="/ediths" style="text-decoration: none; color: white;">>> Update Blood Sugar Values</a></button>
+</div>
+
+<div style="text-align: left;">
+<button id="updatehemo" class="update"><a href="/ediths" style="text-decoration: none; color: white;">>> Update Haemoglobin Values</a></button>
+</div>
+
+<div style="text-align: left;">
+<button id="updateplat" class="update"><a href="/ediths" style="text-decoration: none; color: white;">>> Update Platelet Values</a></button>
+</div>
+
+<div style="text-align: left;">
+<button id="updaterbc" class="update"><a href="/ediths" style="text-decoration: none; color: white;">>> Update RBC and WBC Count Values</a></button>
+</div>
+
+<div style="text-align: left;">
+<button id="updateurea" class="update"><a href="/ediths" style="text-decoration: none; color: white;">>> Update Uric Acid Values</a></button>
+</div>
+    </div>
+
+<div style="display: none;">
+  <ul id="testing">
+    <% for(var i=0; i<sugar.length; i++){ %>
+      <li class="item"><%= sugar[i] %></li>
+  <% } %>
+
+  </ul>
+</div>
+
+<div style="display: none;">
+  <ul id="testing">
+    <% for(var i=0; i<hemo.length; i++){ %>
+      <li class="item1"><%= hemo[i] %></li>
+  <% } %>
+
+  </ul>
+</div>
+
+<div style="display: none;">
+  <ul id="testing">
+    <% for(var i=0; i<chol.length; i++){ %>
+      <li class="item2"><%= chol[i] %></li>
+  <% } %>
+
+  </ul>
+</div>
+
+<div style="display: none;">
+  <ul id="testing">
+    <% for(var i=0; i<platelet.length; i++){ %>
+      <li class="item3"><%= platelet[i] %></li>
+  <% } %>
+
+  </ul>
+</div>
+
+<div style="display: none;">
+  <ul id="testing">
+    <% for(var i=0; i<rbcc.length; i++){ %>
+      <li class="item4"><%= rbcc[i] %></li>
+  <% } %>
+
+  </ul>
+</div>
+
+<div style="display: none;">
+  <ul id="testing">
+    <% for(var i=0; i<wbcc.length; i++){ %>
+      <li class="item5"><%= wbcc[i] %></li>
+  <% } %>
+
+  </ul>
+</div>
+
+<div style="display: none;">
+  <ul id="testing">
+    <% for(var i=0; i<urea.length; i++){ %>
+      <li class="item6"><%= urea[i] %></li>
+  <% } %>
+
+  </ul>
+</div>
+
+
+    <button onclick="draw(sugardata)"></button>
+
+
+<div style="display: none;">
+  <p id="test1"><%= sugar.length %></p>
+  <p id="test2"><%= hemo.length %></p>
+  <p id="test3"><%= chol.length %></p>
+  <p id="test4"><%= platelet.length %></p>
+  <p id="test5"><%= rbcc.length %></p>
+  <p id="test6"><%= wbcc.length %></p>
+  <p id="test7"><%= urea.length %></p>
+</div>
+
+</body>
+</html>

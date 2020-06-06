@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <title>HomePage</title>
+  <style>
+  	@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+    @import 'http://fonts.googleapis.com/css?family=Berkshire+Swash';
+    @import 'http://fonts.googleapis.com/css?family=Merienda+One';
+    @import 'http://fonts.googleapis.com/css?family=Cookie';
+    @import 'http://fonts.googleapis.com/css?family=Just+Another+Hand';
+    @import 'http://fonts.googleapis.com/css?family=Great+Vibes';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  font-family: "Open Sans", "Trebuchet MS", Helvetica, sans-serif;
+  text-align: center;
+  min-width: 320px;
+  background: linear-gradient(90deg, white,gray);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, white, #7CDEAF);
+  justify-content: space-around;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  z-index: 1000;
+}
+
+#logo-name {
+  display: flex;
+  align-items: center;
+}
+
+#header-img {
+  padding: 7px;
+  height: 70px;
+  display: flex;
+}
+
+#company-name {
+  font-size: 2.5em;
+  display: flex;
+  white-space: nowrap;
+  font-weight: bold;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  color: rgba(0,0,0,0.7);
+  text-shadow: 3px 3px 3px #fff;
+}
+
+#nav-bar {
+  display: flex;
+}
+
+.ul-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Arial", "Gadget", sans-serif;
+}
+
+.nav-link {
+  display: flex;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.ul-container li a{
+    color: black;
+}
+
+.ul-container li a:hover{
+  text-shadow: 3px yellow;
+  color: #9BC20D;
+  font-weight: bold;
+}
+.mainbody{
+  background: url("dietbg5.jpg") no-repeat;
+  background-size: cover;
+  margin-top: 100px;
+  color: white;
+}
+.inside{
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+.intro{
+  font-family: "Arial black";
+  font-size: 45px;
+  text-align: left;
+  margin: auto;
+  color: white;
+  width: 70%;
+  margin-bottom: 60px;
+}
+#ques1 p, #ques2 p{
+  color: #D4AA0E;
+    font-family: 'Merienda One', Helvetica, sans-serif;
+    font-size: 25px;
+    margin-top: 20px;
+}
+form{
+  margin-left: 20%;
+}
+#options{
+  text-align: left;
+  width: 100%;
+  padding-left: 15%;
+  padding-top: 20px;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  color: #B3F061;
+}
+#options input{
+  margin-top: 10px;
+  margin-right: 10px;
+}
+#start{
+  background: linear-gradient(90deg, #91CE3F, #35730D);
+  border: 3px solid #35730D;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 60px;
+  padding-right: 60px;
+  color: white;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+#start:hover{
+  background: linear-gradient(90deg, #E7E241, #BDB709);
+  font-weight: bold;
+  border: 3px solid #BDB709;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  #header {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  #logo-name {
+    display: flex;
+  }
+  
+  #header-img {
+    height: 53px;
+    flex: 1 auto;
+  }
+  
+  #company-name {
+    flex: 1 auto;
+    font-size: 1.4em;
+  }
+  
+  #nav-bar {
+    flex: 1 0 100%;
+    margin-top: -10px;
+    justify-content: center;
+  }
+  
+  .ul-container {
+    margin: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-link {
+    margin: auto;
+    font-size: 0.9em;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+
+
+	<header id="header">
+      <div id="logo-name">
+      <img id="header-img" src="bacteria.png" alt="company-logo">
+        <p id="company-name">Healthaholic</p>
+        </div>
+      <nav id="nav-bar">
+        <ul class="ul-container">
+          <li><a class="nav-link" href="/homepage">Home</a></li>
+          <li><a class="nav-link" href="/profilepage">My Profile</a></li>
+          <li><a class="nav-link" href="/contact">Contact-Us</a></li>
+          <li><a class="nav-link" href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="mainbody">
+      <div class="inside">
+        <div class="intro">
+          Choose Your Diet Preferences.
+        </div>
+        <form action="/getdiet" method="POST">
+        <div id="ques1">
+          <p>How many of these meals do you prefer daily?</p>
+          <div id="options">
+          <input type="checkbox" name="meal" value="b">
+          <label for="vehicle1"> Breakfast</label>
+          <input type="checkbox" name="meal" value="l">
+          <label for="vehicle2"> Lunch</label>
+          <input type="checkbox" name="meal" value="s">
+          <label for="vehicle3"> Snacks</label>
+          <input type="checkbox" name="meal" value="d">
+          <label for="vehicle3"> Dinner</label>
+          </div>
+        </div>
+        <div id="ques2">
+          <p>What type of meal do you prefer?</p>
+          <div id="options">
+          <input type="radio" name="type" value="1">
+          <label for="male">Vegetarian(without Eggs)</label>
+          <input type="radio" name="type" value="0">
+          <label for="female">Non-Vegetarian</label>
+          <input type="radio" name="type" value="2">
+          <label for="other">Vegetarian with Eggs</label>
+          <input type="radio" name="type" value="3">
+          <label for="other">Both Veg and Non-Veg</label>
+          </div>
+        </div>
+        <div id="sub">
+          <input type="submit" name="subbut" value="Get A Diet" id="start">
+        </div>
+        </form>
+      </div>
+    </div>
+
+    
+</body>
+</html>

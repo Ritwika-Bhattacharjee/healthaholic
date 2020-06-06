@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <title>HomePage</title>
+  <style>
+  	@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+    @import 'http://fonts.googleapis.com/css?family=Berkshire+Swash';
+    @import 'http://fonts.googleapis.com/css?family=Merienda+One';
+    @import 'http://fonts.googleapis.com/css?family=Cookie';
+    @import 'http://fonts.googleapis.com/css?family=Just+Another+Hand';
+    @import 'http://fonts.googleapis.com/css?family=Great+Vibes';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  font-family: "Open Sans", "Trebuchet MS", Helvetica, sans-serif;
+  text-align: center;
+  min-width: 320px;
+  background: linear-gradient(90deg, white, white);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, white, #7CDEAF);
+  justify-content: space-around;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  z-index: 1000;
+}
+
+#logo-name {
+  display: flex;
+  align-items: center;
+}
+
+#header-img {
+  padding: 7px;
+  height: 70px;
+  display: flex;
+}
+
+#company-name {
+  font-size: 2.5em;
+  display: flex;
+  white-space: nowrap;
+  font-weight: bold;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  color: rgba(0,0,0,0.7);
+  text-shadow: 3px 3px 3px #fff;
+}
+
+#nav-bar {
+  display: flex;
+}
+
+.ul-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Arial", "Gadget", sans-serif;
+}
+
+.nav-link {
+  display: flex;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.ul-container li a{
+    color: black;
+}
+
+.ul-container li a:hover{
+  text-shadow: 3px yellow;
+  color: #9BC20D;
+  font-weight: bold;
+}
+
+#level1{
+  margin-top: 120px;
+  width: 100%;
+  background: url("profilebg1.jpg") no-repeat;
+  background-size: cover;
+}
+#level2{
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#level3{
+  margin-left: 200px;
+  margin-right: 100px;
+  text-align: left;
+}
+#name{
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
+}
+.choosetab{
+  background-color: white;
+  font-family: "Times New Roman";
+  font-weight: bold;
+  font-size: 17px;
+}
+.choosetab td{
+  height: 100%;
+   padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 5px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+}
+#border{
+  border-bottom: 5px solid blue;
+  border-right: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+}
+
+#start{
+  background: linear-gradient(90deg, #053263, #074A92);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 3px solid white;
+  color: black;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+#start:hover{
+  background: linear-gradient(90deg, black, black);
+  font-weight: bold;
+  border: 3px solid #074A92;
+}
+
+#endodiv, #ectodiv, #mesodiv{
+  display: none;
+}
+
+#result{
+  color: white;
+  background-color: black;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#ques, #exhead{
+  font-size: 20px;
+  margin-top: 20px;
+  margin: auto;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid black;
+  width: 50%;
+  margin-top: 20px;
+  font-weight: bold;
+}
+#exhead{
+  font-size: 35px;
+    font-family: 'Merienda One', Helvetica, sans-serif;
+
+}
+#desc{
+  width: 60%;
+  margin: auto;
+  font-weight: bold;
+}
+#exercise{
+  width: 60%;
+  margin: auto;
+  font-weight: bold;
+}
+#exlist p {
+  font-size: 25px;
+      font-family: 'Merienda One', Helvetica, sans-serif;
+      border-bottom: 1px solid black;
+      width: 60%;
+      margin: auto;
+      margin-bottom: 20px;
+
+}
+ul{
+  text-align: left;
+}
+li{
+  margin-bottom: 10px;
+}
+@media (max-width: 1024px) {
+  #header {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  #logo-name {
+    display: flex;
+  }
+  
+  #header-img {
+    height: 53px;
+    flex: 1 auto;
+  }
+  
+  #company-name {
+    flex: 1 auto;
+    font-size: 1.4em;
+  }
+  
+  #nav-bar {
+    flex: 1 0 100%;
+    margin-top: -10px;
+    justify-content: center;
+  }
+  
+  .ul-container {
+    margin: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-link {
+    margin: auto;
+    font-size: 0.9em;
+  }
+}
+
+  </style>
+</head>
+<body>
+	<header id="header">
+      <div id="logo-name">
+      <img id="header-img" src="bacteria.png" alt="company-logo">
+        <p id="company-name">Healthaholic</p>
+        </div>
+      <nav id="nav-bar">
+        <ul class="ul-container">
+          <li><a class="nav-link" href="/homepage">Home</a></li>
+          <li><a class="nav-link" href="/profilepage">My Profile</a></li>
+          <li><a class="nav-link" href="/contact">Contact-Us</a></li>
+          <li><a class="nav-link" href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="level1">
+      <div id="level2">
+        <div id="level3">
+          <p id="name"><%= name %></p>
+          <p>Doctors won’t make you healthy. Nutritionists won’t make you slim. Teachers won’t make you smart. Gurus won’t make you calm. Mentors won’t make you rich. Trainers won’t make you fit. Ultimately, you have to take responsibility in your hands. Save yourself. </p><br>
+          <p>Your health is your greatest gift, your most precious possession and the highest form of happiness.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="choosetab">
+      <table width="100%">
+        <tr>
+          <td><a href="/profilepage" style="text-decoration: none; color: black;">Personal Details</a></td>
+          <td><a href="/healthstatspage" style="text-decoration: none; color: black;">Health Stats</a></td>
+          <td><a href="/profiledietpage" style="text-decoration: none; color: black;">My Diet</a></td>
+          <td id="border"><a href="/profilefitnesspage" style="text-decoration: none; color: black;">My Fitness Routine</a></td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="ectodiv">
+      <div id="result" style="margin-top: 0px;">
+      Your Body Type: Ectomorph
+    </div>
+
+    <div id="defn">
+      <p id="ques">What is an Ectomorph?</p>
+      <p id="desc">The ectomorph is one of the three most common body types (somatotypes), characterized by a “thin frame” and difficulty to gain muscle mass as well as fat. People that belong to this somatotype are usually skinny, lean and have a high metabolic rate.</p>
+    </div>
+
+    <div id="picture">
+      <table width="50%" style="margin: auto;">
+        <tr>
+          <td>
+            <img src="ecto1.jpg" width="400px" height="400px">
+          </td>
+          <td>
+            <img src="ecto2.jpg" width="400px" height="400px">
+          </td>
+        </tr>
+      </table>
+    </div>
+
+      <div id="exhead">EXERCISES FOR YOU.</div>
+
+    <div id="exercise">
+      <div id="intro">
+        <p style="margin-bottom: 20px;">The foundation of ectomorph training should aim to improve testosterone (your muscle building hormone) production, as this is likely to help you maximize your gains made from each and every workout.</p>
+        <p style="margin-bottom: 20px;">Avoid any kind of cardio. After all, calories are extremely precious commodities for hard gainers and you can't afford to burn excess via cardio.</p>
+      </div>
+      <div id="exlist">
+        <p>In Short:</p>
+        <ul>
+          <li>compound multi-jointed exercises (such as squats, deadlifts, bench presses) in a workout that lasts no more than 55 minutes</li>
+          <li>Rest 2-4 minutes between sets to give yourself enough recovery time.</li>
+          <li>Incline barbell presses: 5x5 reps for chest and triceps</li>
+          <li>Lat pulldowns: 4x8-10 reps for back and biceps</li>
+          <li>Face pulls: 4x12-15 reps for shoulders</li>
+          <li>Barbell back squats: 5x6-8 reps for legs</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+    <div id="mesodiv">
+      <div id="result" style="margin-top: 0px;">
+      Your Body Type: Mesomorph
+    </div>
+
+    <div id="defn">
+      <p id="ques">What is an Mesomorph?</p>
+      <p id="desc">A mesomorph has a large bone structure, large muscles and a naturally athletic physique. Mesomorphs are the best body type for bodybuilding. They find it quite easy to gain and lose weight. They are naturally strong which is the perfect platform for building muscle.</p>
+    </div>
+
+    <div id="picture">
+      <table width="50%" style="margin: auto;">
+        <tr>
+          <td>
+            <img src="meso1.jpg" width="400px" height="400px">
+          </td>
+          <td>
+            <img src="meso2.jpg" width="400px" height="400px">
+          </td>
+        </tr>
+      </table>
+    </div>
+
+      <div id="exhead">EXERCISES FOR YOU.</div>
+
+    <div id="exercise">
+      <div id="intro">
+        <p style="margin-bottom: 20px;">Exercise and training will come fairly easy to a mesomorph because of their naturally muscular physique.  However it is very important for the mesomorph to incorporate rest and stretching days. A mesomorph can very easily over-train their bodies, leading to problems.</p>
+        <p style="margin-bottom: 20px;">The best strategy for a mesomorph is to incorporate a variety of workouts throughout the week. It's recommended that a mesomorph workout about 5 times a week for about 30-45 minutes. Rotating between High Intensity Interval Training (HIIT) Workouts and steady state cardio is optimum.</p>
+      </div>
+      <div id="exlist">
+        <p>In Short:</p>
+        <ul>
+          <li>HIIT(High intensity interval training 2-3 times per week</li>
+          <li>Steady state cardio(runnig, spinning, etc.) 2 times per week</li>
+          <li>Have at least 1 rest day per week(don;t overtrain)</li>
+          <li>Lift moderate to heavy weights(with limited rest between sets)</li>
+          <li>Add yoga pilates or stretching- 1 time per week</li>
+          <li>Change up the intensity of workouts often</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+    <div id="endodiv">
+      <div id="result" style="margin-top: 0px;">
+      Your Body Type: Endomorph
+    </div>
+
+    <div id="defn">
+      <p id="ques">What is an Endomorph?</p>
+      <p id="desc">The endomorph body type is solid and generally soft. Endomorphs gain fat very easily. Endo’s are usually of a shorter build with thick arms and legs. Muscles are strong, especially the upper legs. Endomorphs find they are naturally strong in leg exercises like the squat.</p>
+    </div>
+
+    <div id="picture">
+      <table width="50%" style="margin: auto;">
+        <tr>
+          <td>
+            <img src="endo1.jpg" width="400px" height="400px">
+          </td>
+          <td>
+            <img src="endo2.jpg" width="400px" height="400px">
+          </td>
+        </tr>
+      </table>
+    </div>
+
+      <div id="exhead">EXERCISES FOR YOU.</div>
+
+    <div id="exercise">
+      <div id="intro">
+        <p style="margin-bottom: 20px;">Exercise for the endomorph is going to focus on cardio and heavy weight lifting.  Because the endomorph has such a large bone structure, it is perfect for lifting those heavy weights.  It's going to be difficult for an endomorph to stay lean, and so they will want to focus on lifting weights that focus on their larger muscle groups.</p>
+        <p style="margin-bottom: 20px;">Don't be discouraged, endomorphs!  You have larger, defined muscles, it's just covered up with fat.  Once the fat starts being shed, those muscles and definition will shine on through.  For this reason, make sure when you take a rest day, you counter it with an activity such as brisk walks or a type of yoga.  Keeping active every day will help improve the metabolism of an endomorph.</p>
+      </div>
+      <div id="exlist">
+        <p>In Short:</p>
+        <ul>
+          <li>High intenstiy cardiac -3 days per week</li>
+          <li>Lift heavy weights -3 days per week</li>
+          <li>Have active rest days -1 day per week</li>
+          <li>Circuit training with little rest between sets</li>
+          <li>Focus weight training on large muscles</li>
+          <li>Change up the TYPE of workouts often</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+    <div>
+  <button id="start"><a href="/fitnessquiz" style="text-decoration: none; color: white;">Take Another Fitness Quiz</a></button>
+</div>
+
+<div style="display: none;">
+<p id="bodytype"><%= bodytype %></p>
+</div>
+
+
+<script>
+  $(document).ready(function(){
+    var b = $("#bodytype").html();
+    if(b=="ectomorph"){
+      $("#ectodiv").css("display", "block");
+    }
+    else if(b=="mesomorph"){
+      $("#mesodiv").css("display", "block");
+    }
+    else if(b=="endomorph"){
+      $("#endodiv").css("display", "block");
+    }
+  });
+</script>
+
+</body>
+</html>

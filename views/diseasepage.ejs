@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+  <title>HomePage</title>
+  <style>
+  	@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+    @import 'http://fonts.googleapis.com/css?family=Berkshire+Swash';
+    @import 'http://fonts.googleapis.com/css?family=Merienda+One';
+    @import 'http://fonts.googleapis.com/css?family=Cookie';
+    @import 'http://fonts.googleapis.com/css?family=Just+Another+Hand';
+    @import 'http://fonts.googleapis.com/css?family=Great+Vibes';
+    @import 'http://fonts.googleapis.com/css?family=Just+Another+Hand';
+    @import"https://fonts.googleapis.com/css?family=Raleway";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  font-family: "Open Sans", "Trebuchet MS", Helvetica, sans-serif;
+  text-align: center;
+  min-width: 320px;
+  background: linear-gradient(90deg, white, gray);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, white, #7CDEAF);
+  justify-content: space-around;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  z-index: 1000;
+}
+
+#logo-name {
+  display: flex;
+  align-items: center;
+}
+
+#header-img {
+  padding: 7px;
+  height: 70px;
+  display: flex;
+}
+
+#company-name {
+  font-size: 2.5em;
+  display: flex;
+  white-space: nowrap;
+  font-weight: bold;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  color: rgba(0,0,0,0.7);
+  text-shadow: 3px 3px 3px #fff;
+}
+
+#nav-bar {
+  display: flex;
+}
+
+.ul-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Arial", "Gadget", sans-serif;
+}
+
+.nav-link {
+  display: flex;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.ul-container li a{
+    color: black;
+}
+
+.ul-container li a:hover{
+  text-shadow: 3px yellow;
+  color: #9BC20D;
+  font-weight: bold;
+}
+.tabbutton{
+  width: 100%;
+  height: 70px;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  /*font-family: 'Raleway', Helvetica, Arial, sans-serif;*/
+  /*font-family: 'Just Another Hand', Helvetica, sans-serif;*/
+  /*text-shadow: 0px 3px 0px #5e5e5e, 0px 5px 0px #4d4d4d, 0px 7px 0px;*/
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tabbutton a:link, .tabbutton a:visited, .tabbutton a:hover{
+  text-decoration: none;
+  color: black;
+}
+#selected{
+  border: 5px solid #A2F94C;
+}
+#notselected{
+  border: 5px solid transparent;
+}
+#notselected:hover{
+  border: 5px solid #ECE811;
+}
+.tellus{
+  width: 100%;
+  text-align: left;
+  padding-left: 60px;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  font-size: 40px;
+  padding-top: 30px;
+  color: #355818;
+
+}
+.symptoms{
+  width: 100%;
+  text-align: left;
+  padding-left: 80px;
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Arial";
+}
+input+label{
+  color: #4C880C;
+}
+input:checked + label {
+  /*color: #80D427;*/
+  color: maroon;
+  font-size: 30px;
+}
+
+#predictbut{
+  text-align: center;
+  margin-top: 40px;
+}
+#prebut{
+  padding: 10px 60px;
+  border-radius: 30px;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  background: linear-gradient(90deg, #8FC85E, #4C7F21);
+  color: white;
+
+}
+#prebut:hover{
+  border: 5px solid #A9EC33;
+}
+#batch2, #batch3, #batch4, #batch5{
+  display: none;
+}
+#nextlink, #prevlink{
+  border: 5px solid transparent;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+#nextlink:hover, #prevlink:hover{
+  border: 5px solid white;
+}
+#nextlink{
+  background-color: #ADEAD6;
+}
+#prevlink{
+  background-color: #E7F67D;
+}
+@media (max-width: 1024px) {
+  #header {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  #logo-name {
+    display: flex;
+  }
+  
+  #header-img {
+    height: 53px;
+    flex: 1 auto;
+  }
+  
+  #company-name {
+    flex: 1 auto;
+    font-size: 1.4em;
+  }
+  
+  #nav-bar {
+    flex: 1 0 100%;
+    margin-top: -10px;
+    justify-content: center;
+  }
+  
+  .ul-container {
+    margin: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-link {
+    margin: auto;
+    font-size: 0.9em;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<script>
+  var batchno = 1;
+  var id="";
+
+$(document).ready(function(){
+  $("#nextlink").click(function(){
+  id = "#batch"+batchno;
+  $(id).css("display", "none");
+    batchno= batchno+1;
+    id = "#batch"+batchno;
+    $(id).css("display", "block");
+  });
+
+  $("#prevlink").click(function(){
+  id = "#batch"+batchno;
+  $(id).css("display", "none");
+    batchno= batchno-1;
+    id = "#batch"+batchno;
+    $(id).css("display", "block");
+  });
+});
+
+</script>
+
+
+	<header id="header">
+      <div id="logo-name">
+      <img id="header-img" src="bacteria.png" alt="company-logo">
+        <p id="company-name">Healthaholic</p>
+        </div>
+      <nav id="nav-bar">
+        <ul class="ul-container">
+          <li><a class="nav-link" href="/homepage">Home</a></li>
+          <li><a class="nav-link" href="/profilepage">My Profile</a></li>
+          <li><a class="nav-link" href="/contact">Contact-Us</a></li>
+          <li><a class="nav-link" href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="selectbar" style="margin-top: 118px;">
+      <table width="100%">
+        <tr>
+          <td><button class="tabbutton" id="selected"><a href="/diseasepage">Predict A Disease</a></button></td>
+          <td><button class="tabbutton" id="notselected"><a href="/testpage">Test for a Disease</a></button></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="tellus">Tell Us About Your Symptoms/Problems...</div>
+
+    <div class="symptoms">
+      <form method="POST" action="/whichdisease">
+        <div id="batch1">
+        <input type="checkbox" id="" name="symptoms" value="s1">
+        <label for="">Increased hunger and thirst</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s2">
+        <label for="">Facing recent weight loss issues</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s3">
+        <label for="">Frequent Urination Urges</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s4">
+        <label for="">Vision Seems blurry</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s5">
+        <label for="">Feelings of extreme fatigue and poor muscle strength</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s6">
+        <label for="">Sores don't tend to heal quickly</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s7">
+        <label for="">Erectile dysfunction</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s8">
+        <label for="">Urinary Tract Infection</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s9">
+        <label for="">Skin has recently turned dry and itchy</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s10">
+        <label for="">Stomach trouble like loss of appetite, nausea, and vomiting and belly pain</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s11">
+        <label for="">Feeling feverish</label><br>
+        </div>
+        <div id="batch2">
+        <input type="checkbox" id="" name="symptoms" value="s12">
+        <label for="">Your skin or the whites of the eyes have turned yellow</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s13">
+        <label for="">Yellow-orange urine and light colored bowels</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s14">
+        <label for="">Frequent vomiting</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s15">
+        <label for="">Swelling in legs and ankle</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s16">
+        <label for="">Chronic fatigue</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s17">
+        <label for="">Tendency to bruise easily</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s18">
+        <label for="">Chest pain, chest tightness, chest pressure and chest discomfort(angina)</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s19">
+        <label for="">Shortness of breath</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s20">
+        <label for="">Pain, numbness, weakness or coldness in your legs or arms</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s21">
+        <label for="">Pain in the neck, jaw, throat, upper abdomen or back</label><br>
+      </div>
+        <div id="batch3">
+        <input type="checkbox" id="" name="symptoms" value="s22">
+        <label for="">Lightheadedness or Dizziness or Fainting (syncope) or near fainting</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s23">
+        <label for="">Either Racing heartbeat (tachydia) or Slow heartbeat (bradycardia)</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s24">
+        <label for="">Easily tiring during exercise or activity</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s25">
+        <label for="">Feeling tired and having trouble concentrating</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s26">
+        <label for="">Trouble in sleeping</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s27">
+        <label for="">Foamy Urine or blood in urine</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s28">
+        <label for="">Experiencing persistent puffiness around your eyes</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s29">
+        <label for="">Experiencing muscle cramps</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s30">
+        <label for="">Watery diarrhea (sometimes in large volumes)</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s31">
+        <label for="">Fishy odor to stools</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s32">
+        <label for="">Loss of skin elasticity (washer woman hands sign)</label><br>
+      </div>
+        <div id="batch4">
+        <input type="checkbox" id="" name="symptoms" value="s33">
+        <label for="">Dry mucous membranes (dry mouth)</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s34">
+        <label for="">Low blood pressure</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s35">
+        <label for="">Unusual sleepiness or tiredness</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s36">
+        <label for="">Abdominal pain (cramps) or Rectal pain</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s37">
+        <label for="">Dehydration</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s38">
+        <label for="">Low or no urine output</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s39">
+        <label for="">Morning Stiffness or stiffness after any prolonged period of activity like napping or sitting</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s40">
+        <label for="">Joint Stiffness and pain</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s41">
+        <label for="">numbness, tingling, or a burning feeling in your hands</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s42">
+        <label for="">unable to bend or straighten some joints.</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s43">
+        <label for="">Cough with or without blood lasting for three weeks or more</label><br>
+      </div>
+        <div id="batch5">
+        <input type="checkbox" id="" name="symptoms" value="s44">
+        <label for="">Chest pain, or pain with breathing or coughing</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s45">
+        <label for="">Night sweats and Chills</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s46">
+        <label for="">Constipation</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s47">
+        <label for="">Mood changes, from depression to euphoria</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s48">
+        <label for="">Food cravings, increased thirst and urination</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s49">
+        <label for="">Frequent yawning</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s50">
+        <label for="">Visual phenomena, such as seeing various shapes, bright spots or flashes of light</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s51">
+        <label for="">Pins and needles sensations in an arm or leg</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s52">
+        <label for="">Weakness or numbness in the face or one side of the body</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s53">
+        <label for="">Difficulty speaking</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s54">
+        <label for="">Uncontrollable jerking or other movements</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s55">
+        <label for="">Pain usually on one side of your head, but often on both sides</label><br>
+        <input type="checkbox" id="" name="symptoms" value="s56">
+        <label for="">Sensitivity to light, sound, and sometimes smell and touch</label><br>
+      </div>
+
+        
+        
+
+        <div id="predictbut">
+          <table width="100%" style="padding-right: 60px;">
+            <tr>
+              
+              <td>
+                  <div id="prevlink" style="cursor:pointer"><<-Prev</div>
+
+              </td>
+              <td>
+                <div id="nextlink" style="cursor:pointer">Next->></div>
+
+              </td>
+            </tr>
+          </table>
+<br>
+ 
+          <input type="submit" name="prebut" value="Predict!" id="prebut">
+        </div>
+      </form>
+    </div>
+
+</body>
+</html>
+

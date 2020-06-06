@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet">
+
+
+
+  <title>HomePage</title>
+  <style>
+  	@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+    @import 'http://fonts.googleapis.com/css?family=Berkshire+Swash';
+    @import 'http://fonts.googleapis.com/css?family=Merienda+One';
+    @import 'http://fonts.googleapis.com/css?family=Cookie';
+    @import 'http://fonts.googleapis.com/css?family=Just+Another+Hand';
+    @import 'http://fonts.googleapis.com/css?family=Great+Vibes';
+    @import 'http://fonts.googleapis.com/css?family=Just+Another+Hand';
+    @import"https://fonts.googleapis.com/css?family=Raleway";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  font-family: "Open Sans", "Trebuchet MS", Helvetica, sans-serif;
+  text-align: center;
+  min-width: 320px;
+  background: linear-gradient(90deg, white, gray);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, white, #7CDEAF);
+  justify-content: space-around;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  z-index: 1000;
+}
+
+#logo-name {
+  display: flex;
+  align-items: center;
+}
+
+#header-img {
+  padding: 7px;
+  height: 70px;
+  display: flex;
+}
+
+#company-name {
+  font-size: 2.5em;
+  display: flex;
+  white-space: nowrap;
+  font-weight: bold;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  color: rgba(0,0,0,0.7);
+  text-shadow: 3px 3px 3px #fff;
+}
+
+#nav-bar {
+  display: flex;
+}
+
+.ul-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Arial", "Gadget", sans-serif;
+}
+
+.nav-link {
+  display: flex;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.ul-container li a{
+    color: black;
+}
+
+.ul-container li a:hover{
+  text-shadow: 3px yellow;
+  color: #9BC20D;
+  font-weight: bold;
+}
+.tabbutton{
+  width: 100%;
+  height: 70px;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  /*font-family: 'Raleway', Helvetica, Arial, sans-serif;*/
+  /*font-family: 'Just Another Hand', Helvetica, sans-serif;*/
+  /*text-shadow: 0px 3px 0px #5e5e5e, 0px 5px 0px #4d4d4d, 0px 7px 0px;*/
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tabbutton a:link, .tabbutton a:visited, .tabbutton a:hover{
+  text-decoration: none;
+  color: black;
+}
+#selected{
+  border: 5px solid #A2F94C;
+}
+#notselected{
+  border: 5px solid transparent;
+}
+#notselected:hover{
+  border: 5px solid #ECE811;
+}
+.tellus{
+  width: 100%;
+  text-align: left;
+  padding-left: 60px;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  font-size: 40px;
+  padding-top: 30px;
+  color: #355818;
+
+}
+.symptoms{
+  width: 100%;
+  text-align: left;
+  padding-left: 80px;
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Arial";
+}
+
+input:checked + label {
+  color: #9CD66C;
+  font-size: 30px;
+}
+
+#predictbut{
+  text-align: center;
+  margin-top: 40px;
+}
+#prebut{
+  padding: 10px 60px;
+  border-radius: 30px;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  background: linear-gradient(90deg, #8FC85E, #4C7F21);
+  color: white;
+
+}
+#prebut:hover{
+  border: 5px solid #A9EC33;
+}
+
+.testimg:hover{
+  border: 7px solid white;
+}
+
+.centered {
+  position: absolute;
+  top: -160%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  background-color: black;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  opacity: 0.7;
+
+}
+
+@media (max-width: 1024px) {
+  #header {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  #logo-name {
+    display: flex;
+  }
+  
+  #header-img {
+    height: 53px;
+    flex: 1 auto;
+  }
+  
+  #company-name {
+    flex: 1 auto;
+    font-size: 1.4em;
+  }
+  
+  #nav-bar {
+    flex: 1 0 100%;
+    margin-top: -10px;
+    justify-content: center;
+  }
+  
+  .ul-container {
+    margin: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-link {
+    margin: auto;
+    font-size: 0.9em;
+  }
+}
+
+  </style>
+</head>
+<body>
+	<header id="header">
+      <div id="logo-name">
+      <img id="header-img" src="bacteria.png" alt="company-logo">
+        <p id="company-name">Healthaholic</p>
+        </div>
+      <nav id="nav-bar">
+        <ul class="ul-container">
+          <li><a class="nav-link" href="/homepage">Home</a></li>
+          <li><a class="nav-link" href="/profilepage">My Profile</a></li>
+          <li><a class="nav-link" href="/contact">Contact-Us</a></li>
+          <li><a class="nav-link" href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="selectbar" style="margin-top: 118px;">
+      <table width="100%">
+        <tr>
+          <td><button class="tabbutton" id="notselected"><a href="/diseasepage">Predict A Disease</a></button></td>
+          <td><button class="tabbutton" id="selected"><a href="/testpage">Test for a Disease</a></button></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="tellus">Test For Any Disease Here...</div>
+    <p style="text-align: left; color: maroon; font-size: 12px; font-weight: bold; margin-left: 60px;">**Note: You might need to perform prior lab test to know the accurate values of certain parameters.</p>
+
+    <div>
+      <table width="70%" style="margin: auto; margin-top: 40px;">
+        <tr>
+          <td><a href="/heart" style="position: relative;"><img src="heart.jpg" width="300px" height="300px" class="testimg"><div class="centered">HEART DISEASE</div></a></td>
+          <td><a href="/diabetes" style="position: relative;"><img src="diabetes.jpg" width="300px" height="300px" class="testimg"><div class="centered">DIABETES</div></a></td>
+          <td><a href="/hepatitis" style="position: relative;"><img src="hepatitis.jpg" width="300px" height="300px" class="testimg"><div class="centered">HEPATITIS</div></a></td>
+        </tr>
+        <tr>
+          <td><a href="/kidney" style="position: relative;"><img src="kidney.jpg" width="300px" height="300px" class="testimg"><div class="centered">KIDNEY DISEASE</div></a></td>
+          <td><a href="/liver" style="position: relative;"><img src="liver.jpg" width="300px" height="300px" class="testimg"><div class="centered">LIVER DISEASE</div></a></td>
+          
+        </tr>
+      </table>
+    </div>
+
+    
+
+</body>
+</html>

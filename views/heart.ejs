@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"> </script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis/dist/tf.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@0.4.0/dist/tf.min.js"> </script>
+ --><script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@latest"> </script>
+ <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet">
+
+  <title> sample outputs</title>
+<style>
+  @import 'https://fonts.googleapis.com/css?family=Open+Sans';
+    @import 'http://fonts.googleapis.com/css?family=Berkshire+Swash';
+    @import 'http://fonts.googleapis.com/css?family=Merienda+One';
+    @import 'http://fonts.googleapis.com/css?family=Cookie';
+    @import 'http://fonts.googleapis.com/css?family=Just+Another+Hand';
+    @import 'http://fonts.googleapis.com/css?family=Great+Vibes';
+    @import 'http://fonts.googleapis.com/css?family=Just+Another+Hand';
+    @import"https://fonts.googleapis.com/css?family=Raleway";
+
+  body{
+    background: url("bubblebg.jpg") no-repeat;
+    background-size: cover;
+  }
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  font-family: "Open Sans", "Trebuchet MS", Helvetica, sans-serif;
+  text-align: center;
+  min-width: 320px;
+}
+
+  #header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, white, #7CDEAF);
+  justify-content: space-around;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  z-index: 1000;
+}
+
+#logo-name {
+  display: flex;
+  align-items: center;
+}
+
+#header-img {
+  padding: 7px;
+  height: 70px;
+  display: flex;
+}
+
+#company-name {
+  font-size: 2.5em;
+  display: flex;
+  white-space: nowrap;
+  font-weight: bold;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  color: rgba(0,0,0,0.7);
+  text-shadow: 3px 3px 3px #fff;
+}
+
+#nav-bar {
+  display: flex;
+}
+
+.ul-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Arial", "Gadget", sans-serif;
+}
+
+.nav-link {
+  display: flex;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.ul-container li a{
+    color: black;
+}
+
+.ul-container li a:hover{
+  text-shadow: 3px yellow;
+  color: #9BC20D;
+  font-weight: bold;
+}
+#enter{
+  color: white;
+  margin-top: 200px;
+  font-size: 35px;
+  text-align: left;
+  padding-left: 40px;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  font-weight: bold;
+
+}
+input{
+  background-color: #302D2E;
+  width: 50%;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  color: white;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  font-size: 12px; /* Firefox */
+}
+select{
+  background-color: #302D2E;
+  width: 50%;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  color: white;
+  font-size: 12px;
+}
+option{
+  opacity: 0.5;
+}
+#prebut{
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #2ABDDA;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  width: 30%;
+  margin-top: 20px;
+  margin-left: 10%;
+}
+#pred-res{
+  color: red;
+  width: 70%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 25px;
+}
+#note{
+  color: #F02E6F;
+  font-size: 12px;
+  text-align: left;
+  margin-left: 60px;
+}
+@media (max-width: 1024px) {
+  #header {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  #logo-name {
+    display: flex;
+  }
+  
+  #header-img {
+    height: 53px;
+    flex: 1 auto;
+  }
+  
+  #company-name {
+    flex: 1 auto;
+    font-size: 1.4em;
+  }
+  
+  #nav-bar {
+    flex: 1 0 100%;
+    margin-top: -10px;
+    justify-content: center;
+  }
+  
+  .ul-container {
+    margin: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-link {
+    margin: auto;
+    font-size: 0.9em;
+  }
+}
+</style>
+
+</head>
+<body>
+
+  <script>
+    /*plotting scatterplot*/
+
+  </script>
+
+<header id="header">
+      <div id="logo-name">
+      <img id="header-img" src="bacteria.png" alt="company-logo">
+        <p id="company-name">Healthaholic</p>
+        </div>
+      <nav id="nav-bar">
+        <ul class="ul-container">
+          <li><a class="nav-link" href="/homepage">Home</a></li>
+          <li><a class="nav-link" href="/profilepage">My Profile</a></li>
+          <li><a class="nav-link" href="/contact">Contact-Us</a></li>
+          <li><a class="nav-link" href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+<div style="margin-top: 120px;">
+  <p id="enter">Enter the following to predict your chances of Heart Disease: </p>
+  <p id="note">Note: You might need to undergo some physical tests or refer to your latest health report to know exact value of certain parameters.</p>
+  <div id="pred-res">
+    <%= result %>
+  </div>
+  <div style="margin-top: 20px; text-align: left; padding-left: 200px;">
+  <form method="POST" action="/predictioninputforheart">
+    <input type="text" name="age" placeholder="Enter age...."><br>
+    <select name="sex">
+        <option value="">Gender</option>
+  <option value="1">Male</option>
+  <option value="0">Female</option>
+  <option value="0">Others</option>
+</select><br>
+<select name="cp">
+        <option value="">Chest Pain Type</option>
+  <option value="0">Typical Angina</option>
+  <option value="1">Atypical Angina</option>
+  <option value="2">Non-Anginal pain</option>
+  <option value="3">Asymptotic pain</option>
+</select><br>
+    <input type="text" name="restbp" placeholder="Enter your resting blood pressure in mm Hg...."><br>
+    <input type="text" name="chol" placeholder="Enter serum cholesterol...."><br>
+    <select name="fbs">
+        <option value="">Fasting blood sugar</option>
+  <option value="0">Less than 120 mg/dL</option>
+  <option value="1">More than 120 mg/dL</option>
+</select><br>
+<select name="restecg">
+        <option value="">Resting Electrocardiographic results(ECG):</option>
+  <option value="0">Normal</option>
+  <option value="1">Having ST-T wave abnormality</option>
+  <option value="1">Left ventricular hyperthrophy</option>
+</select><br>
+    <input type="text" name="maxhr" placeholder="Enter your maximum heart rate...."><br>
+    <select name="exang">
+        <option value="">Exercise Induced Angina:</option>
+  <option value="1">Yes</option>
+  <option value="0">No</option>
+</select><br>
+    <input type="submit" name="subbut" value="Predict!" id="prebut">
+  </form>
+
+
+</div>
+  
+</div>
+  
+</body>
+</html>
+

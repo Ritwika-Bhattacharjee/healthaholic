@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+  <title>HomePage</title>
+  <style>
+  	@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+    @import 'http://fonts.googleapis.com/css?family=Berkshire+Swash';
+    @import 'http://fonts.googleapis.com/css?family=Merienda+One';
+    @import 'http://fonts.googleapis.com/css?family=Cookie';
+    @import 'http://fonts.googleapis.com/css?family=Just+Another+Hand';
+    @import 'http://fonts.googleapis.com/css?family=Great+Vibes';
+    @import 'http://fonts.googleapis.com/css?family=Just+Another+Hand';
+    @import"https://fonts.googleapis.com/css?family=Raleway";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  font-family: "Open Sans", "Trebuchet MS", Helvetica, sans-serif;
+  text-align: center;
+  min-width: 320px;
+  background: linear-gradient(90deg, white, gray);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, white, #7CDEAF);
+  justify-content: space-around;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  z-index: 1000;
+}
+
+#logo-name {
+  display: flex;
+  align-items: center;
+}
+
+#header-img {
+  padding: 7px;
+  height: 70px;
+  display: flex;
+}
+
+#company-name {
+  font-size: 2.5em;
+  display: flex;
+  white-space: nowrap;
+  font-weight: bold;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  color: rgba(0,0,0,0.7);
+  text-shadow: 3px 3px 3px #fff;
+}
+
+#nav-bar {
+  display: flex;
+}
+
+.ul-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Arial", "Gadget", sans-serif;
+}
+
+.nav-link {
+  display: flex;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.ul-container li a{
+    color: black;
+}
+
+.ul-container li a:hover{
+  text-shadow: 3px yellow;
+  color: #9BC20D;
+  font-weight: bold;
+}
+
+.disclaimer{
+  width: 100%;
+  text-align: left;
+  padding-left: 60px;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  font-size: 30px;
+  padding-top: 30px;
+  color: #355818;
+  margin-top: 120px;
+}
+
+#disease-container{
+  margin-left: 100px;
+  text-align: left;
+  color: maroon;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.diet{
+  background: url("diet.jpg") no-repeat;
+  background-size: cover;
+  color: white;
+  font-weight: bold;
+}
+#opa{
+  opacity: 0.7;
+  background-color: black;
+  padding-bottom: 60px;
+}
+.exercise{
+  background: url("exercise3.jpg") no-repeat;
+  background-size: cover;
+  color: white;
+  font-weight: bold;
+
+}
+#suggest{
+    font-family: 'Merienda One', Helvetica, sans-serif;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+    margin-top: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+#start{
+  background: linear-gradient(90deg, #0D2002, #2D690A);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 60px;
+  padding-right: 60px;
+  border: 3px solid white;
+  color: black;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 20px;
+  margin: auto;
+  margin-top: 40px;
+}
+#start:hover{
+  background: linear-gradient(90deg, #053263, #074A92);
+  font-weight: bold;
+  border: 3px solid #074A92;
+}
+.diabetes, .hepatitis, .liver-disease, .heart-disease, .kidney-disease, .cholera, .arthritis, .tb, .jaundice, .migraine{
+  display: none;
+  text-align: left;
+}
+#head1{
+  margin-bottom: 15px;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #DEC50E;
+  margin-top: 10px;
+}
+.do, .dont, .tips{
+  margin-bottom: 10px;
+  font-family: 'Merienda One', Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #DEC50E;
+  margin-top: 10px;
+}
+.do{
+  color: #1CA545;
+}
+.dont{
+  color: #C6134E;
+}
+.tips{
+  color: #A3EBEC;
+}
+.diet p{
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.exercise p {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1024px) {
+  #header {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  #logo-name {
+    display: flex;
+  }
+  
+  #header-img {
+    height: 53px;
+    flex: 1 auto;
+  }
+  
+  #company-name {
+    flex: 1 auto;
+    font-size: 1.4em;
+  }
+  
+  #nav-bar {
+    flex: 1 0 100%;
+    margin-top: -10px;
+    justify-content: center;
+  }
+  
+  .ul-container {
+    margin: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-link {
+    margin: auto;
+    font-size: 0.9em;
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <script>
+$(document).ready(function(){
+  $(".item").each(function(index, value){
+    console.log($(this).html());
+    var d = $(this).html();
+    if(d==="diabetes"){
+      $(".diabetes").css("display", "block");
+    }
+    if(d==="hepatitis"){
+      $(".hepatitis").css("display", "block");
+    }
+    if(d==="liver disease"){
+      $(".liver-disease").css("display", "block");
+    }
+    if(d==="heart disease"){
+      $(".heart-disease").css("display", "block");
+    }
+    if(d==="kidney disease"){
+      $(".kidney-disease").css("display", "block");
+    }
+    if(d==="cholera"){
+      $(".cholera").css("display", "block");
+    }
+    if(d==="arthritis"){
+      $(".arthritis").css("display", "block");
+    }
+    if(d==="tuberculosis"){
+      $(".tb").css("display", "block");
+    }
+    if(d==="jaundice"){
+      $(".jaundice").css("display", "block");
+    }
+    if(d==="migraine"){
+      $(".migraine").css("display", "block");
+    }
+  });
+});
+
+    
+  </script>
+
+
+	<header id="header">
+      <div id="logo-name">
+      <img id="header-img" src="bacteria.png" alt="company-logo">
+        <p id="company-name">Healthaholic</p>
+        </div>
+      <nav id="nav-bar">
+        <ul class="ul-container">
+          <li><a class="nav-link" href="/homepage">Home</a></li>
+          <li><a class="nav-link" href="/profilepage">My Profile</a></li>
+          <li><a class="nav-link" href="/contact">Contact-Us</a></li>
+          <li><a class="nav-link" href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="disclaimer">You may have a risk of the following Diseases...</div>
+
+    <div id="disease-container">
+      <ul id="diseaselist" style="list-style-type: circle;">
+        <% diseases.forEach(function(item, index){  %>
+        <li class="item"><%= item %></li>
+        <% }); %>
+      </ul>
+    </div>
+
+    
+    <div class="diet">
+      <div id="opa">
+        <div style="width: 70%; margin: auto;">
+        <p id="suggest">Recommended Diet</p>
+        
+        <div class="diabetes">
+          <p id="head1">For Diabetes:</p>
+          <p class="do">Eat More</p>
+            <div><p>Healthy fats from nuts, olive oil, fish oils, flax seeds, or avocados</p>
+<p>Fruits and vegetables—ideally fresh, the more colorful the better; whole fruit rather than juices</p>
+<p>High-fiber cereals and breads made from whole grains</p>
+<p>Fish and shellfish, organic chicken or turkey</p>
+<p>High-quality protein such as eggs, beans, low-fat dairy, and unsweetened yogurt</p>
+</div>
+<p class="dont">Eat Less</p>
+<div>
+  <p>Trans fats from partially hydrogenated or deep-fried foods</p>
+  <p>Packaged and fast foods, especially those high in sugar, baked goods, sweets, chips, desserts</p>
+  <p>White bread, sugary cereals, refined pastas or rice</p>
+  <p>Processed meat and red meat</p>
+  <p>Low-fat products that have replaced fat with added sugar, such as fat-free yogurt</p>
+</div>
+<p class="tips">Tips</p>
+<div>
+  <p>To avoid spiking your blood sugar try consuming the following instead of the regular ones:</p>
+  <p>Brown or wild rice, Whole-wheat pasta, sweet potatoes, Whole-wheat or whole-grain bread, High-fiber, low-sugar cereal, Steel-cut or rolled oats and Low-sugar bran flakes</p>
+</div>
+        </div>
+
+        <div class="hepatitis">
+          <p id="head1">For Hepatitis:</p>
+          <p class="do">Try to Eat</p>
+            <div><p>Plenty of fruits and vegetables</p>
+<p>Whole grains such as oats, brown rice, barley, and quinoa</p>
+<p>Lean protein such as fish, skinless chicken, egg whites, and beans</p>
+<p>Low-fat or non-fat dairy products</p>
+<p>Healthy fats like those in nuts, avocados, and olive oil</p>
+</div>
+<p class="dont">Try to avoid</p>
+<div>
+  <p>Saturated fats found in butter, sour cream, and other high-fat dairy foods, fatty cuts of meat, and fried foods</p>
+  <p>Sugary treats like cookies, cake, soda, and packaged baked goods</p>
+  <p>Foods heavily laced with salt</p>
+  <p>Alcohol</p>
+</div>
+<p class="tips">Tips</p>
+<div>
+  <p>Don't take in too much of certain vitamins and minerals such as iron, Vitamin A, B3, C and D through the use of supplements, since some can cause liver damage.</p>
+</div>
+        </div>
+
+
+        <div class="liver-disease">
+          <p id="head1">For Liver Disease:</p>
+          <p class="do">Try to Eat</p>
+            <div><p>Coffee to lower abnormal liver enzymes</p>
+<p>Greens to prevent fat buildup</p>
+<p>Tofu to reduce fat buildup</p>
+<p>Fish for inflammation and fat levels</p>
+<p>Oatmeal for energy</p>
+<p>Walnuts to improve the liver</p>
+<p>Milk and other low-fat dairy to protect from damage</p>
+<p>Avocado to help protect the liver</p>
+<p>Sunflower seeds for antioxidants</p>
+<p>Olive oil for weight control</p>
+<p>Garlic to help reduce body weight</p>
+<p>Green tea for less fat absorption</p>
+
+</div>
+<p class="dont">Try to avoid</p>
+<div>
+  <p>Alcohol: Alcohol is a major cause of fatty liver disease as well as other liver diseases.</p>
+  <p>Added suga:. Stay away from sugary foods such as candy, cookies, sodas, and fruit juices. High blood sugar increases the amount of fat buildup in the liver.</p>
+  <p>Fried foods: These are high in fat and calories.</p>
+  <p>Salt: Eating too much salt can make your body hold on to excess water. Limit sodium to less than 1,500 milligrams per day.</p>
+  <p>White bread, rice, and pasta. White usually means the flour is highly processed, which can raise your blood sugar more than whole grains due to a lack of fiber.</p>
+  <P>Red meat. Beef and deli meats are high in saturated fat.</P>
+</div>
+
+        </div>
+
+  <div class="heart-disease">
+          <p id="head1">For Heart Disease:</p>
+          <p class="do">Try to Eat</p>
+            <div><p>Healthy fats, such as raw nuts, olive oil, fish oils, flaxseeds, and avocados</p>
+<p>Colorful fruits and vegetables—fresh or frozen</p>
+<p>High-fiber cereals, breads, and pasta made from whole grains or legumes</p>
+<p>High-quality protein, such as fish and poultry</p>
+<p>Organic dairy such as eggs, skim milk, or unsweetened yogurt</p>
+</div>
+<p class="dont">Try to avoid</p>
+<div>
+  <p>Trans fats from partially hydrogenated or deep-fried foods; saturated fats from fried food, fast food, and snack foods.</p>
+  <p>Packaged foods, especially those high in sodium and sugar</p>
+  <p>White or egg breads, sugary cereals, refined pastas or rice</p>
+  <p>Processed meat such as bacon, sausage, and salami, and fried chicken</p>
+  <p>Yogurt with added sugar; processed cheese</p>
+</div>
+<p class="tips">Tips</p>
+<div>
+  <p>No single food can make you magically healthy, so your overall dietary pattern is more important than specific foods. Instead of fried, processed food, packaged meals, and sugary snacks, a heart-healthy diet is built around “real,” natural food—fresh from the ground, ocean, or farm.</p>
+</div>
+        </div>
+
+
+    <div class="kidney-disease">
+          <p id="head1">For Kidney Disease:</p>
+          <p class="do">Try to Include in your Diet</p>
+            <div><p>Cauliflower for Vitamin K, Vitamin C and Vitamin B folate</p>
+<p>Blueberries for antioxidants</p>
+<p>Sea bass for proteins and incredibily healthy fats</p>
+<p>Red grapes for Vitamin C, antioxidants and resuction of inflammation</p>
+<p>Egg Whites (without egg yolks) to avoid High amounts of phosphorus</p>
+<p>Garlic as an alternative to salt to limit the amount of salt in your diet</p>
+<p>Buckwheat as whole grains to avoid high phosphorus</p>
+<p>Use Olive Oil for fat and phosphorus free diet</p>
+<p>Cabbage for Vitamin B, Vitamin C and Vitamin K</p>
+</div>
+<p class="dont">Try to avoid</p>
+<div>
+  <p>Dark-colored soda</p>
+  <p>Canned foods</p>
+  <p>Whole wheat bread</p>
+  <p>Brown rice</p>
+  <p>Bananas</p>
+  <p>Oranges and orange juice</p>
+  <p>Potatoes and sweet potatoes</p>
+</div>
+
+        </div>
+
+<div class="cholera">
+          <p id="head1">For Cholera:</p>
+          <p class="do">Try to Eat</p>
+            <div><p>Coconut water to get rid of dehydration</p>
+<p>Plenty of fluids like (fruit juices, water, soda etc.)</p>
+<p>Properly cooked food</p>
+<p>Sour fruits (lemon, orange) can kill cholera bacilli  in a short period of time</p>
+<p>Honey</p>
+<p>Onions allays thirst and restlessness and the patient feels better.</p>
+<p>Black pepper</p>
+</div>
+<p class="dont">Try to avoid</p>
+<div>
+  <p>Sea foods especially fish and shellfish</p>
+  <p>Meat</p>
+  <p>Raw vegetables</p>
+  <p>Ice made outside</p>
+  <p>Junk food (road side food)</p>
+  <p>Unpasteurized milk and  milk products</p>
+</div>
+<p class="tips">Tips</p>
+<div>
+  <p>Take plenty of fluids (mainly ORS), Apply hot-blanket pack or take hot-full bath followed by vigorous cold rubbing with towel, Apply ice bag or cold compress over stomach, throat and spine, Lemon juice drunk either sweet or salted can help, Always boil water before drinking and Maintain hygienic environment.
+</p>
+</div>
+        </div>
+
+
+<div class="arthritis">
+          <p id="head1">For Arthritis:</p>
+          <p class="do">Try to Eat</p>
+            <div><p>Fatty fish varieties such as salmon, mackerel, sardines and trout are high in omega-3 fatty acids, which have been shown to have potent anti-inflammatory effects.</p>
+<p>Garlic and Ginger to resuce inflammation</p>
+<p>Broccoli also contains important components that could help reduce symptoms of arthritis.</p>
+<p>Walnuts are nutrient-dense and loaded with compounds that may help reduce the inflammation associated with joint disease.</p>
+<p>Berries contain antioxidants that have been shown to decrease arthritis-related inflammatory marker</p>
+<p>Leafy greens like spinach</p>
+<p>Olive oil may have a favorable effect on arthritis symptoms.</p>
+<p>Tart cherry Juice</p>
+</div>
+
+<p class="tips">Tips</p>
+<div>
+  <p>Walk or do some other form of aerobic exercise, such as swimming or biking, each day. Not only does this help maintain weight, but in combination with smart food choices it can promote weight loss. Besides, exercise improves digestion, enhances cardiovascular health and can help achy joints weather the storms of pain and discomfort.
+</p>
+</div>
+        </div>
+
+
+<div class="tb">
+          <p  id="head1">For Tuberculosis:</p>
+          <p class="do">Try to Eat</p>
+            <div><p>Carbohydrates and fat rich food such as Whole grain cereals, millets.
+Vegetable oils, ghee, butter.
+Nuts and oil seeds. Sugars</p>
+<p>Protein rich foods such as Pulses, nuts and some oilseeds.
+Milks & milk products
+Meat, fish, poultry</p>
+<p>Protective foods having vitamins and minerals such as Green leafy vegetables.
+Other vegetables & fruits.
+Eggs, milk & milk products and flesh foods.</p>
+
+</div>
+<p class="dont">Try to avoid</p>
+<div>
+  <p>Alcohol in any form, as it increases the risk of drug toxicity</p>
+  <p>Carbonated drinks</p>
+  <p>Excess of tea and coffee, or their intake with foods</p>
+  <p>Tobacco and tobacco products</p>
+  <p>An excess of spices & salt.</p>
+</div>
+<p class="tips">Tips</p>
+<div>
+  <p>Try to consume a lot of nutrients.If people do not have sufficient nutrition, sometimes referred to as under nutrition, then this makes TB worse.  Under nutrition weakens the body’s ability to fight disease.
+</p>
+</div>
+        </div>
+
+
+<div class="jaundice">
+          <p id="head1">For Jaundice:</p>
+          <p class="do">Quick Do's</p>
+            <div><p>Drink at least eight glasses of fluids per day. Water and herbal tea are excellent options.</p>
+<p>Consider adding milk thistle to your routine. You can prepare a fresh tea or eat the seeds as a snack.</p>
+<p>Opt for fruits like papaya and mango, which are rich in digestive enzymes.</p>
+<p>Eat at least 2 1/2 cups of veggies and 2 cups of fruit per day.</p>
+<p>Look for high-fiber foods, such as oatmeal, berries, and almonds.</p>
+
+</div>
+<p class="dont">What should you avoid</p>
+<div>
+  <p>Alcohol can cause additional damage to your liver, so it’s best to avoid it completely.</p>
+  <p>Opt for lean proteins, such as fish, which are less likely to contribute to liver damage.</p>
+  <p>Saturated fats, like those found in meat, are also harder for your liver to process.</p>
+  <p>Unsaturated fats, such as olive oil, can be used in moderation.</p>
+  <p>Refined sugar can cause fat buildup in your liver, so opt for foods containing natural sugars. Use agave as a sweetener and look to fruits to satisfy your sweet tooth.</p>
+  <p>Reduce your sodium intake by avoiding canned and processed foods.</p>
+</div>
+<p class="tips">Tips</p>
+<div>
+  <p>Jaundice is caused by a buildup of bilirubin in the blood. Its root cause determines, in part, how long it will take to clear out of your system. A healthy, well-balanced diet that supports liver health can help alleviate jaundice and prevent its recurrence.
+</p>
+</div>
+        </div>
+
+
+<div class="migraine">
+          <p id="head1">For Migraine:</p>
+          <p class="do">Try to eat</p>
+            <div><p>Orange, yellow, and green vegetables, such as summer squash, sweet potatoes, carrots, and spinach</p>
+<p>Carbonated, spring, or tap water</p>
+<p>Rice, especially brown rice</p>
+<p>Dried or cooked fruits, particularly non-citrus kinds such as cherries and cranberries</p>
+<p>Natural sweeteners or flavors, such as maple syrup and vanilla extract</p>
+
+</div>
+<p class="dont">What should you avoid</p>
+<div>
+  <p>Alcohol, especially Red Wine</p>
+  <p>Tomatoes, Eggs and Onions</p>
+  <p>Wheat, including pasta and bread products</p>
+  <p>Citrus fruit</p>
+  <p>Chocolates</p>
+  <p>Dairy Products and aged Cheese</p>
+</div>
+<p class="tips">Tips</p>
+<div>
+  <p>To help relieve migraine pain, you should keep a food journal and take note of any symptoms you may experience. This can help you and your doctor isolate your individual migraine triggers and work out a personalized plan for migraine management.
+</p>
+</div>
+        </div>
+
+
+      <button id="start"><a href="/dietquiz" style="text-decoration: none; color: white;">Get a Personalised Diet</a></button>
+      </div>
+    </div>
+      
+    </div>
+    
+    <div class="exercise">
+      <div id="opa">
+        <div style="width: 60%; margin: auto;">
+        <p id="suggest">Recommended Exercise</p>
+        
+        
+        <div class="diabetes">
+          <p id="head1">For Diabetes:</p>
+          <div>
+            <p>At least two and a half hours of moderate to vigorous intensity physical activity per week (i.e., brisk walking, water aerobics, swimming, or jogging).</p>
+            <p>Two to three sessions of resistance exercise per week. Resistance exercise is physical activity that strengthens muscle strength, such as lifting five pound weights or doing pushups.</p>
+            <p>No more than two days in a row without physical activity.</p>
+            <p>Breaking up sitting time every 30 minutes during the day.</p>
+            <p>Incorporate flexibility exercises, like stretching or yoga into your weekly routine.</p>
+          </div>
+          
+        </div>
+
+        <div class="hepatitis">
+          <p id="head1">For Hepatitis:</p>
+          <div>
+            <p>Exercise is important, and not just because it helps to keep your weight down. Exercise can improve your appetite, relieve some of the side effects of hepatitis C medications if you are taking them, boost your immune system, and improve your sense of well-being.</p>
+            <p>Try to have 10-minute blocks of exercise throughout the day. Low-impact exercises such as walking or swimming are the best. For example, start with a 10-minute walk. Participate at a comfortable level, take rest breaks, and increase your activity level slowly (15 to 30 minutes, 3 to 5 days a week).</p>
+            <p>Remember that patients with cirrhosis can put on "fluid weight." This is different from "fat weight," which is what most of us put on. Fluid weight is managed in a different way. Talk to your health care provider if you have cirrhosis or are retaining fluid in your legs or abdomen.</p>
+            <p>Remember, if you are overweight, it is important that you begin an exercise routine and start eating a healthy, well-balanced diet. Always talk to your doctor before starting a diet and exercise program.</p>
+          </div>
+          
+        </div>
+
+
+        <div class="liver-disease">
+          <p id="head1">For Liver Disease:</p>
+          <div>
+            <p>Particular benefits have been observed in aerobic exercises, which is why yoga, qigong and tai chi are often recommended for patients suffering from liver disease. However some simple Day to Day exercises are:</p>
+            <p>Arm Raises in Sync with the Breath</p>
+            <p>Liver Moves, A Simple Self-Massage</p>
+            <p>Simple Spinal Twists</p>
+            <p>Exercise Your Abdominal Muscles</p>
+            <p>Lift Your Legs Over the Head</p>
+            <p>Pressure Points Exercises</p>
+          </div>
+          
+        </div>
+
+        <div class="heart-disease">
+          <p id="head1">For Heart Disease:</p>
+          <div>
+            <p>exercising 30 minutes a day five days a week will improve your heart health and help reduce your risk of heart disease</p>
+            <p>This includes: climbing stairs, playing sports, walking, jogging, swimming, biking, and more.</p>
+            <p>Aerobic Exercises like Brisk walking, running, swimming, cycling, playing tennis and jumping rope. Heart-pumping aerobic exercise is the kind that doctors have in mind when they recommend at least 150 minutes per week of moderate activity.</p>
+            <p>Strength work exercises like Working out with free weights (such as hand weights, dumbbells or barbells), on weight machines, with resistance bands or through body-resistance exercises, such as push-ups, squats and chin-ups.</p>
+            <p>Try doing balance, stretching and flexibility exercises in the form of Tai chi and yoga Every day and before and after other exercise</p>
+          </div>
+          
+        </div>
+
+         <div class="kidney-disease">
+          <p id="head1">For Kidney Disease:</p>
+          <div>
+            <p>Choose continuous activity such as walking, swimming, bicycling (indoors or out), skiing, aerobic dancing or any other activities in which you need to move large muscle groups continuously.</p>
+            <p>Low-level strengthening exercises may also be beneficial as part of your program. Design your program to use low weights and high repetitions, and avoid heavy lifting.</p>
+            <p>Work toward 30 minutes a session. You should build up gradually to this level.</p>
+            <p>Exercise at least three days a week. These should be non-consecutive days, for example, Monday, Wednesday and Friday. Three days a week is the minimum requirement to achieve the benefits of your exercise.</p>
+            <p>The most important thing is to start slowly and progress gradually, allowing your body to adapt to the increased levels of activity.</p>
+          </div>
+          
+        </div>
+
+        <div class="cholera">
+          <p id="head1">For Cholera:</p>
+          <div>
+            <p>There is no such specific exercise recommended for cholera. Just make sure to maintain hygiene and safety such as drink purified water, keep your surroundings clean, wash your hands, cook food well and covere it properly.</p>
+          </div>
+          
+        </div>
+
+        <div class="arthritis">
+          <p id="head1">For Arthritis:</p>
+          <div>
+            <p>The following types of exercise may help relieve the pain, joint stiffness, and other symptoms that Arthritis can cause:</p>
+            <p>Stretching</p>
+            <p>Walking</p>
+            <p>Flowing movements, such as tai chi and yoga</p>
+            <p>Pilates</p>
+            <p>Swimming, water aerobics, and other gentle water exercises can increase flexibility, range of motion, strength, and aerobic conditioning. They can also reduce joint stress and stiffness.</p>
+            <p>Cycling</p>
+            <p>Hand exercises: Bending the wrists up and down, slowly curling the fingers, spreading the fingers wide on a table, and squeezing a stress ball can all help increase strength and flexibility in the hands.</p>
+            <p>Gardening offers the benefit of improving mood. People should be gentle with their body, work slowly, and avoid overstraining the muscles and joints.</p>
+          </div>
+          
+        </div>
+
+        <div class="tb">
+          <p id="head1">For Tuberculosis:</p>
+          <div>
+            <p>Exercises can include endurance activities, strength training for proximal upper and lower extremity muscles, and diaphragmatic breathing exercises. </p>
+            <p> Supervised endurance activities of walking or treadmill walking and stationary bicycling are appropriate for beginning the exercise program.</p>
+            <p>For strength training, use a circuit of free weights and pulley exercises at low intensities, with 12 to 20 repetitions for up to 30 minutes.</p>
+            <p>Diaphragmatic breathing training can be performed in supine and sitting positions with an emphasis on rib cage expansion and controlled expirations with pursed lip breathing.</p>
+          </div>
+          
+        </div>
+
+        <div class="jaundice">
+          <p id="head1">For Jaundice:</p>
+          <div>
+            <p>It is recommended not to do any specific exercise during jaundice as it can slow down your recovery.</p>
+            <p>Your liver is down, needs sometime to fully recover. While suffering from Jaundice the body cannot produce enough sweat and if there's a strain, the liver may give up.</p>
+            <p>However if you want to do some, you can opt for Yoga Asanas like Setubandhasana, Sarvangasana, Matsyasana, Bhujangasana, Shalabhasana, Dhanurasana, Shirshasana and Shavasana</p>
+            <p>Do not change postures too quickly as you'd not be doing your normal freehand exercises. You'd need to stay in each posture taking certain number of breaths each time whether you'd do a repetition or before you move on to a new posture.</p>
+          </div>
+          
+        </div>
+
+        <div class="migraine">
+          <p id="head1">For Migraine:</p>
+          <div>
+            <p>Mild regular aerobic exercises like jogging, swimming, dancing, cycling and brisk walking offers the most benefits to those with migraine</p>
+            <p>At the start of your new exercise regimen it is best to avoid activities which are too strenuous or competitive until you are fitter, but moderate intensity (equivalent to brisk walking) is fine</p>
+            <p>You should try to exercise for at least 30 minutes of moderate intensity, 3 times a week. Give yourself at least 6 weeks to see if there is any beneficial effect.</p>
+          </div>
+          
+        </div>
+
+        
+
+
+
+      <button id="start"><a href="/fitnessquiz" style="text-decoration: none; color: white;">Plan Your Fitness</a></button>
+    </div>
+      </div>
+    </div>
+
+</body>
+</html>
+
